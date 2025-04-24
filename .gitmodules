@@ -1,0 +1,6 @@
+[submodule "ri-queries"]
+	path = ri-queries
+	url = git@github.com:ubvu/ri-queries.git
+[submodule "stylefiles"]
+	path = stylefiles
+	url = git@github.com:mtthsdzwn/stylefiles.git

@@ -1,0 +1,16 @@
+---
+title: Using the obstetrics-gynaecology dashboard
+author: Team Research Intelligence
+date: 03-13-2025
+format: html
+---
+
+# Introduction
+
+# Using the dashboard
+
+# Caveats
+
+## Risk of outliers
+
+## Filtering limits the data
