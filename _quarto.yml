@@ -7,7 +7,7 @@ website:
     left:
       - href: index.qmd
         text: Documentation
-      - href: background.qmd
+      - href: queries.qmd
         text: "Queries and abbreviations"
       - href: contact.qmd
         text: Contact
@@ -19,6 +19,3 @@ format:
       - brand
     css: stylefiles/documentation.scss
     toc: true
-
-
-
