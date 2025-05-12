@@ -17,6 +17,11 @@ import pandas as pd
 sys.path.append("ri-queries")
 from working_with_queries import get_query, print_query, print_title
 
+skip_og = []
+skip_clin = ['A-LM', 'A-MON', 'A-NM', 'A-REST', 'A-RO', 'A-RRR']
+skip_topics = ['QOL']
+keep_gyncancers = ['GYN-CER', 'GYN-END', 'GYN-GEN', 'GYN-OVA', 'GYN-VUL']
+
 main_path = Path().resolve()
 dirs = sorted( { p.parent for p in main_path.glob('**/*.dict') } )
 
@@ -24,8 +29,10 @@ hierarchy = pd.read_csv(main_path / 'ri-queries' / 'Keywords' / 'OG' / 'keywords
 departments = set(hierarchy['dep_long'].tolist())
 subdivisions = set(hierarchy['sub_long'].tolist())
 
+gyn_cancer_path = main_path / 'ri-queries' / 'Keywords' / 'CCA'
+
 sub_lists = {}
-for department in departments:
+for department in sorted(departments):
         # For each department, we create a set of relevant sub_short entries in the dictionary
         sub_lists[department] = set(hierarchy.loc[hierarchy['dep_long'] == department, 'sub_long'].tolist())
         
@@ -36,13 +43,11 @@ for dept, sub in zip(hierarchy['dep_long'], hierarchy['sub_long']):
     if sub not in files_lists[dept].keys():
         files_lists[dept][sub] = set()
 
-# print(files_lists)
-
 for dir in dirs:
     if dir.relative_to(main_path / 'ri-queries') == Path('Keywords/OG'):
-        files = { p for p in Path(dir).glob('*.dict') }
+        files_og = { p for p in Path(dir).glob('**/*.dict') if p.stem not in skip_og }
 
-        for file in files:
+        for file in sorted(files_og):
             with open(file, mode='r') as f:
                 q = ast.literal_eval(f.read())
 
@@ -53,28 +58,51 @@ for dir in dirs:
                     if q.get('sub_long') == subdivision:
                         files_lists[department][subdivision].add(file)
 
-for dir in dirs:
-    if dir.relative_to(main_path / 'ri-queries') == Path('Keywords/OG'):
-        print(f'\n## Obstetrics and Gynaecology')
-        for department in files_lists.keys():
-            print(f'\n### {department}')
-            for subdivision in files_lists.get(department).keys():
-                print(f'\n#### {subdivision}')
-                for keyword in files_lists.get(department).get(subdivision):
-                    with open(keyword, mode='r') as f:
-                        q = ast.literal_eval(f.read())
-                    
-                    print_title(q, n=5, project='OG')
-                    print('_Pubmed query_')
-                    query_content = get_query(q, query_type='pubmed')
-                    print_query(query_content)
-                    print('_Scopus query_')
-                    query_content = get_query(q, query_type='scopus')
-                    print_query(query_content)
+    elif dir.relative_to(main_path / 'ri-queries') == Path('Keywords/CCA'):
+        files_cca = { p for p in Path(dir).glob('**/*.dict') if p.stem in keep_gyncancers }
 
-    elif dir.relative_to(main_path / 'ri-queries') == Path('clinicalStatus'):
+        for file in sorted(files_cca):
+            with open(file, mode='r') as f:
+                q = ast.literal_eval(f.read())
+
+            # `sub_lists.keys()` holds the values from `dep_long`
+            for department in sub_lists.keys():
+                # Each `sub_lists[department]` holds a set of relevant sub_long entries
+                for subdivision in sub_lists[department]:
+                    if q.get('sub_long') == subdivision:
+                        files_lists[department][subdivision].add(file)
+
+files = files_og.union(files_cca)
+files = sorted(files)
+
+# Print all the OG queries, including those from the CCA queries that are in keep_gyncancers
+print(f'\n## Obstetrics and Gynaecology')
+for department in files_lists.keys():
+    print(f'\n### {department}')
+    for subdivision in sorted(files_lists.get(department).keys()):
+        print(f'\n#### {subdivision}')
+        for keyword in sorted(files_lists.get(department).get(subdivision)):
+            with open(keyword, mode='r') as f:
+                q = ast.literal_eval(f.read())
+            
+            # Determine project based on file path
+            project = 'OG'
+            if 'CCA' in str(keyword):
+                project = 'CCA'
+            
+            print_title(q, n=5, project=project)
+            print('_Pubmed query_')
+            query_content = get_query(q, query_type='pubmed')
+            print_query(query_content)
+            print('_Scopus query_')
+            query_content = get_query(q, query_type='scopus')
+            print_query(query_content)
+
+for dir in dirs:
+
+    if dir.relative_to(main_path / 'ri-queries') == Path('clinicalStatus'):
         print(f'\n## Clinical Status queries')
-        files = { p for p in Path(dir).glob('**/*.dict') }
+        files = { p for p in Path(dir).glob('**/*.dict') if p.stem not in skip_clin }
         for file in files:
             with open(file, mode='r') as f:
                 q = ast.literal_eval(f.read())
@@ -84,7 +112,7 @@ for dir in dirs:
 
     elif dir.relative_to(main_path / 'ri-queries') == Path('topics'):
         print(f'\n## Topic queries')
-        files = { p for p in Path(dir).glob('**/*.dict') }
+        files = { p for p in Path(dir).glob('**/*.dict') if p.stem not in skip_topics }
         for file in files:
             with open(file, mode='r') as f:
                 q = ast.literal_eval(f.read())
@@ -92,7 +120,12 @@ for dir in dirs:
             print_title(q)
             print_query(query_content)
 
+    elif dir.relative_to(main_path / 'ri-queries') == Path('Keywords/OG'):
+        # Already processed above with OG queries, so skip here
+        continue
+
     elif dir.relative_to(main_path / 'ri-queries') == Path('Keywords/CCA'):
+        # Already processed above with OG queries, so skip here
         continue
 
     elif dir.relative_to(main_path / 'ri-queries') == Path('Keywords/KBC'):
@@ -103,6 +136,13 @@ for dir in dirs:
 
     else:
         print(f'\n## Check these queries!')
+        files = { p for p in Path(dir).glob('**/*.dict') }
+        for file in files:
+            with open(file, mode='r') as f:
+                q = ast.literal_eval(f.read())
+            query_content = get_query(q, query_type='pubmed')
+            print_title(q)
+            print(file.name)
 ```
 
 
@@ -110,6 +150,60 @@ for dir in dirs:
 
 ## Departments
 
+```{python}
+#| echo: false
+#| output: asis
+
+import pandas as pd
+from great_tables import GT,html
+
+# Define the departments dictionary
+depts = {
+    'CRM': 'Center for Reproductive Medicine',
+    'E&G': 'Endometriosis & Gynaecology',
+    'GO': 'Gynaecologic Oncology',
+    'PDO': 'Prenatal Diagnostics & Obstetrics'
+}
+
+# Create a DataFrame from the dictionary
+df = pd.DataFrame(list(depts.items()), columns=['Abbreviation', 'Department'])
+
+# Create a GT table
+department_table = (
+    GT(df)
+    .tab_options(container_width=600)
+    .cols_align(align="left")
+)
+department_table
+```
+
 ## Institutes
+
+```{python}
+#| echo: false
+#| output: asis
+
+import pandas as pd
+from great_tables import GT,html
+
+# Define the departments dictionary
+depts = {
+    'CRM': 'Center for Reproductive Medicine',
+    'E&G': 'Endometriosis & Gynaecology',
+    'GO': 'Gynaecologic Oncology',
+    'PDO': 'Prenatal Diagnostics & Obstetrics'
+}
+
+# Create a DataFrame from the dictionary
+df = pd.DataFrame(list(depts.items()), columns=['Abbreviation', 'Department'])
+
+# Create a GT table
+department_table = (
+    GT(df)
+    .tab_options(container_width=600)
+    .cols_align(align="left")
+)
+department_table
+```
 
 ## Keywords
