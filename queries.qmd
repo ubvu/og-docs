@@ -17,7 +17,7 @@ import pandas as pd
 sys.path.append("ri-queries")
 from working_with_queries import get_query, print_query, print_title
 
-skip_og = []
+skip_og = ['ANIM', 'HUM']
 skip_clin = ['A-LM', 'A-MON', 'A-NM', 'A-REST', 'A-RO', 'A-RRR']
 skip_topics = ['QOL']
 keep_gyncancers = ['GYN-CER', 'GYN-END', 'GYN-GEN', 'GYN-OVA', 'GYN-VUL']
@@ -45,9 +45,9 @@ for dept, sub in zip(hierarchy['dep_long'], hierarchy['sub_long']):
 
 for dir in dirs:
     if dir.relative_to(main_path / 'ri-queries') == Path('Keywords/OG'):
-        files_og = { p for p in Path(dir).glob('**/*.dict') if p.stem not in skip_og }
+        files_og = sorted({ p for p in Path(dir).glob('**/*.dict') if p.stem not in skip_og })
 
-        for file in sorted(files_og):
+        for file in files_og:
             with open(file, mode='r') as f:
                 q = ast.literal_eval(f.read())
 
@@ -59,9 +59,9 @@ for dir in dirs:
                         files_lists[department][subdivision].add(file)
 
     elif dir.relative_to(main_path / 'ri-queries') == Path('Keywords/CCA'):
-        files_cca = { p for p in Path(dir).glob('**/*.dict') if p.stem in keep_gyncancers }
+        files_cca = sorted({ p for p in Path(dir).glob('**/*.dict') if p.stem in keep_gyncancers })
 
-        for file in sorted(files_cca):
+        for file in files_cca:
             with open(file, mode='r') as f:
                 q = ast.literal_eval(f.read())
 
@@ -71,9 +71,6 @@ for dir in dirs:
                 for subdivision in sub_lists[department]:
                     if q.get('sub_long') == subdivision:
                         files_lists[department][subdivision].add(file)
-
-files = files_og.union(files_cca)
-files = sorted(files)
 
 # Print all the OG queries, including those from the CCA queries that are in keep_gyncancers
 print(f'\n## Obstetrics and Gynaecology')
@@ -152,10 +149,8 @@ for dir in dirs:
 
 ```{python}
 #| echo: false
-#| output: asis
 
 import pandas as pd
-from great_tables import GT,html
 
 # Define the departments dictionary
 depts = {
@@ -166,44 +161,180 @@ depts = {
 }
 
 # Create a DataFrame from the dictionary
-df = pd.DataFrame(list(depts.items()), columns=['Abbreviation', 'Department'])
+df_depts = pd.DataFrame(list(depts.items()), columns=['Abbreviation', 'Department'])
 
-# Create a GT table
-department_table = (
-    GT(df)
-    .tab_options(container_width=600)
-    .cols_align(align="left")
-)
-department_table
+# Display the table 
+df_depts.style.hide().set_properties(**{'text-align': 'left'}).set_table_styles([
+    {'selector': 'th:nth-child(1)', 'props': [('width', '150px')]},  # First column header
+    {'selector': 'td:nth-child(1)', 'props': [('width', '150px')]},  # First column cells
+    {'selector': 'th:nth-child(2)', 'props': [('width', '350px')]},  # First column header
+    {'selector': 'td:nth-child(2)', 'props': [('width', '350px')]},  # First column cells
+    {'selector': '', 'props': [('max-height', '500px'), 
+                            ('overflow-y', 'auto'),
+                            ('display', 'block')                            ]},
+])
 ```
 
 ## Institutes
 
+Scroll down for more institutes.
+
 ```{python}
 #| echo: false
-#| output: asis
 
 import pandas as pd
-from great_tables import GT,html
 
-# Define the departments dictionary
-depts = {
-    'CRM': 'Center for Reproductive Medicine',
-    'E&G': 'Endometriosis & Gynaecology',
-    'GO': 'Gynaecologic Oncology',
-    'PDO': 'Prenatal Diagnostics & Obstetrics'
+# Define the institutes dictionary
+institutes = {
+    'LEUV': 'KU Leuven-University Hospital Leuven',
+    'MESK': 'Memorial Sloan Kettering',
+    'HAMS': 'Harvard Medical School',
+    'DFCI': 'Dana-Farber Cancer Institute',
+    'MDAN': 'MD Anderson',
+    'JOHO': 'Johns Hopkins',
+    'GURO': 'Gustave Roussy',
+    'KARO': 'Karolinska',
+    'YALE': 'Yale',
+    'UCL': 'UCL (London)',
+    'VALL': 'Vallebron (Barcelona)',
+    'MANC': 'Manchester',
+    'CHAR': 'Charite',
+    'NKIA': 'NKI-AVL',
+    'CCA': 'CCA',
+    'AUMC': 'AMC-VUMC',
+    'ERMC': 'Erasmus MC',
+    'LUMC': 'Leids UMC',
+    'MUMC': 'Maastricht UMC',
+    'UMCG': 'UMC Groningen',
+    'RUMC': 'Radboud UMC',
+    'UMCU': 'UMC Utrecht',
+    'HUBR': 'Hubrecht',
+    'AMS': 'Amsterdam',
+    'AMSU': 'AMS-UMCU',
+    'BOST': 'Harvard Medical School',
+    'TOSK': 'University of Toronto',
+    'GOSH': 'UCL (London)',
+    'CICH': 'Cincinatti',
+    'MAYO': 'Mayo Clinic',
+    'VUB': 'Vrije Universiteit Brussel',
+    'SKMC': 'Thomas Jefferson University',
+    'SJDB': 'Hospital Sant Joan de Deu Barcelona',
+    'SGUH': "St George's, University of London",
+    'RBWH': 'The University of Queensland',
+    'PEN': 'University of Pennsylvania',
+    'OSLO': 'Universitetet i Oslo',
+    'MON': 'Monash Medical Centre',
+    'MIL': 'Universita Studi di Milano',
+    'MICH': "University of Michigan, Ann Arbor",
+    'KING': "King's College London",
+    'HARV': 'Harvard Medical School',
+    'GENT': 'Universiteit Gent',
+    'EUN': 'University of Massachusetts System',
+    'EDIN': 'Edinburgh Medical School',
+    'DUKE': 'Duke University',
+    'DEX': 'Hospital Universitari Dexeus',
+    'COP': 'Copenhagen University Hospital',
+    'BIRM': 'University of Birmingham',
+    'BARC': 'Universitat de Barcelona',
+    'AUCK': 'The University of Auckland',
+    'ADEL': 'The University of Adelaide',
+    'ABER': 'University of Aberdeen',
+    'MELB': 'University of Melbourne',
+    'NW': 'Northwestern University'
 }
 
 # Create a DataFrame from the dictionary
-df = pd.DataFrame(list(depts.items()), columns=['Abbreviation', 'Department'])
+df_inst = pd.DataFrame(list(institutes.items()), columns=['Abbreviation', 'Institute'])
 
-# Create a GT table
-department_table = (
-    GT(df)
-    .tab_options(container_width=600)
-    .cols_align(align="left")
-)
-department_table
+# Display the table directly with scrollable styling
+df_inst.style.hide().set_properties(**{'text-align': 'left'}).set_table_styles([
+    {'selector': 'th:nth-child(1)', 'props': [('width', '150px')]},  # First column header
+    {'selector': 'td:nth-child(1)', 'props': [('width', '150px')]},  # First column cells
+    {'selector': 'th:nth-child(2)', 'props': [('width', '350px')]},  # First column header
+    {'selector': 'td:nth-child(2)', 'props': [('width', '350px')]},  # First column cells
+         {'selector': '', 'props': [('max-height', '500px'), 
+                                ('overflow-y', 'auto'),
+                                ('display', 'block'),
+                                ]},
+    ])
 ```
 
 ## Keywords
+
+Scroll down for more keywords.
+
+```{python}
+#| echo: false
+
+import sys
+import pandas as pd
+import ast
+from pathlib import Path
+
+# Collect all query files
+main_path = Path().resolve()
+query_files = []
+
+# Get all the OG query files from the hierarchy
+hierarchy = pd.read_csv(main_path / 'ri-queries' / 'Keywords' / 'OG' / 'keywords_hierarchy.csv')
+
+skip_og = ['ANIM', 'HUM']
+skip_clin = ['A-LM', 'A-MON', 'A-NM', 'A-REST', 'A-RO', 'A-RRR']
+skip_topics = ['QOL']
+skip_dicts = skip_og + skip_clin + skip_topics
+
+keep_gyncancers = ['GYN-CER', 'GYN-END', 'GYN-GEN', 'GYN-OVA', 'GYN-VUL']
+gyn_cancer_path = main_path / 'ri-queries' / 'Keywords' / 'CCA'
+
+
+# Collect all .dict files
+all_dict_files = list(main_path.glob('**/Keywords/OG/**/*.dict'))
+all_dict_files = [p for p in all_dict_files if p.stem not in skip_dicts]
+all_dict_files.extend([p for p in main_path.glob('**/Keywords/CCA/**/*.dict') 
+                       if any(gc in str(p) for gc in keep_gyncancers)])
+
+# Extract keyword information
+keywords_data = []
+
+for file_path in all_dict_files:
+    try:
+        with open(file_path, 'r') as f:
+            query_dict = ast.literal_eval(f.read())
+            
+        # Determine project and get appropriate keys
+        project = 'OG' if 'OG' in str(file_path) else 'CCA'
+               
+        # Get long name based on project
+        if project == 'OG':
+            keyword_long = query_dict.get('long_og', query_dict.get('long', '[NO LONG TITLE]'))
+            keyword_abbr = query_dict.get('short_og', query_dict.get('long', '[NO SHORT TITLE]'))
+        else:
+            keyword_long = query_dict.get('long', '[NO LONG TITLE]')
+            keyword_abbr = query_dict.get('short', '[NO SHORT TITLE]')
+
+        keywords_data.append({
+            'Abbreviation': keyword_abbr,
+            'Keyword': keyword_long
+        })
+    except Exception as e:
+        # Skip files that can't be processed
+        continue
+
+# Create a DataFrame
+df_keywords = pd.DataFrame(keywords_data)
+
+# Sort by abbreviation
+df_keywords = df_keywords.sort_values('Abbreviation')
+
+# Display the table with same styling as institutes table
+df_keywords.style.hide().set_properties(**{'text-align': 'left'}).set_table_styles([
+    {'selector': 'th:nth-child(1)', 'props': [('width', '150px')]},  # First column header
+    {'selector': 'td:nth-child(1)', 'props': [('width', '150px')]},  # First column cells
+    {'selector': 'th:nth-child(2)', 'props': [('width', '350px')]},  # Second column header
+    {'selector': 'td:nth-child(2)', 'props': [('width', '350px')]},  # Second column cells
+    {'selector': '', 'props': [('max-height', '500px'), 
+                              ('overflow-y', 'auto'),
+                              ('display', 'block'),
+                             ]},
+])
+```
