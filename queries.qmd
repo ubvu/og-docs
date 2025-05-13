@@ -157,9 +157,12 @@ print('### Filters')
 with open(files_lists.get('General').get('Filters'), mode='r') as f:
     q = ast.literal_eval(f.read())
 print_title(q, n=5, project='OG')
+print('_Pubmed query_')
 query_content = get_query(q, query_type='pubmed')
 print_query(query_content)
-
+print('_Scopus query_')
+query_content = get_query(q, query_type='scopus')
+print_query(query_content)
 ```
 
 
