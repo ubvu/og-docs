@@ -21,6 +21,7 @@ skip_og = ['ANIM', 'HUM']
 skip_clin = ['A-LM', 'A-MON', 'A-NM', 'A-REST', 'A-RO', 'A-RRR']
 skip_topics = ['QOL']
 keep_gyncancers = ['GYN-CER', 'GYN-END', 'GYN-GEN', 'GYN-OVA', 'GYN-VUL']
+with_HUM_filter = ['ART', 'FERT']
 
 main_path = Path().resolve()
 dirs = sorted( { p.parent for p in main_path.glob('**/*.dict') } )
@@ -43,6 +44,9 @@ for dept, sub in zip(hierarchy['dep_long'], hierarchy['sub_long']):
     if sub not in files_lists[dept].keys():
         files_lists[dept][sub] = set()
 
+files_lists['General'] = {}
+files_lists['General']['Filters'] = main_path / 'ri-queries' / 'Keywords' / 'OG' / 'HUM.dict'
+
 for dir in dirs:
     if dir.relative_to(main_path / 'ri-queries') == Path('Keywords/OG'):
         files_og = sorted({ p for p in Path(dir).glob('**/*.dict') if p.stem not in skip_og })
@@ -50,7 +54,7 @@ for dir in dirs:
         for file in files_og:
             with open(file, mode='r') as f:
                 q = ast.literal_eval(f.read())
-
+            
             # `sub_lists.keys()` holds the values from `dep_long`
             for department in sub_lists.keys():
                 # Each `sub_lists[department]` holds a set of relevant sub_long entries
@@ -75,10 +79,14 @@ for dir in dirs:
 # Print all the OG queries, including those from the CCA queries that are in keep_gyncancers
 print(f'\n## Obstetrics and Gynaecology')
 for department in files_lists.keys():
+    if department == 'General':
+        continue
     print(f'\n### {department}')
     for subdivision in sorted(files_lists.get(department).keys()):
         print(f'\n#### {subdivision}')
         for keyword in sorted(files_lists.get(department).get(subdivision)):
+            # print(keyword)
+            # print(type(keyword))
             with open(keyword, mode='r') as f:
                 q = ast.literal_eval(f.read())
             
@@ -88,6 +96,9 @@ for department in files_lists.keys():
                 project = 'CCA'
             
             print_title(q, n=5, project=project)
+            if keyword.stem in with_HUM_filter:
+                print('Combined with [HUMAN](#filters) filter for specificity.\n')
+
             print('_Pubmed query_')
             query_content = get_query(q, query_type='pubmed')
             print_query(query_content)
@@ -140,6 +151,15 @@ for dir in dirs:
             query_content = get_query(q, query_type='pubmed')
             print_title(q)
             print(file.name)
+
+print('## General queries')
+print('### Filters')
+with open(files_lists.get('General').get('Filters'), mode='r') as f:
+    q = ast.literal_eval(f.read())
+print_title(q, n=5, project='OG')
+query_content = get_query(q, query_type='pubmed')
+print_query(query_content)
+
 ```
 
 
@@ -278,7 +298,7 @@ query_files = []
 # Get all the OG query files from the hierarchy
 hierarchy = pd.read_csv(main_path / 'ri-queries' / 'Keywords' / 'OG' / 'keywords_hierarchy.csv')
 
-skip_og = ['ANIM', 'HUM']
+skip_og = ['ANIM']
 skip_clin = ['A-LM', 'A-MON', 'A-NM', 'A-REST', 'A-RO', 'A-RRR']
 skip_topics = ['QOL']
 skip_dicts = skip_og + skip_clin + skip_topics
