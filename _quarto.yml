@@ -18,10 +18,8 @@ website:
 
 format:
   html:
-    theme:
+    theme: 
       - cosmo
-    css: stylefiles/documentation.scss
+      - stylefiles/documentation.scss
     toc: true
     code-overflow: wrap
-    resources:
-      - stylefiles/documentation.scss
