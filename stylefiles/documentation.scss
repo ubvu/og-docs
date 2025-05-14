@@ -40,6 +40,8 @@ details {
     padding: $spacing-unit * 1.5;
     border-radius: $border-radius;
     background-color: $color-code-bg;
+    // No horizontal scrollbars
+    overflow-x: auto;
     // Wrapping rules are inherited, no need for !important overrides usually
   }
 }
