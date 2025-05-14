@@ -131,20 +131,20 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#clinical-status-queries" id="toc-clinical-status-queries" class="nav-link" data-scroll-target="#clinical-status-queries">Clinical Status queries</a>
   <ul class="collapse">
-  <li><a href="#clinical-trials-clin-trial" id="toc-clinical-trials-clin-trial" class="nav-link" data-scroll-target="#clinical-trials-clin-trial">Clinical trials (CLIN-TRIAL)</a></li>
   <li><a href="#clinical-data-clin-data" id="toc-clinical-data-clin-data" class="nav-link" data-scroll-target="#clinical-data-clin-data">Clinical data (CLIN-DATA)</a></li>
   <li><a href="#reviews-rev" id="toc-reviews-rev" class="nav-link" data-scroll-target="#reviews-rev">Reviews (REV)</a></li>
   <li><a href="#clinical-guideline-clin-gl" id="toc-clinical-guideline-clin-gl" class="nav-link" data-scroll-target="#clinical-guideline-clin-gl">clinical guideline (CLIN-GL)</a></li>
+  <li><a href="#clinical-trials-clin-trial" id="toc-clinical-trials-clin-trial" class="nav-link" data-scroll-target="#clinical-trials-clin-trial">Clinical trials (CLIN-TRIAL)</a></li>
   </ul></li>
   <li><a href="#topic-queries" id="toc-topic-queries" class="nav-link" data-scroll-target="#topic-queries">Topic queries</a>
   <ul class="collapse">
-  <li><a href="#surgery-surg" id="toc-surgery-surg" class="nav-link" data-scroll-target="#surgery-surg">Surgery (SURG)</a></li>
   <li><a href="#chemotherapy-cht" id="toc-chemotherapy-cht" class="nav-link" data-scroll-target="#chemotherapy-cht">Chemotherapy (ChT)</a></li>
+  <li><a href="#immunology-immu" id="toc-immunology-immu" class="nav-link" data-scroll-target="#immunology-immu">Immunology (IMMU)</a></li>
   <li><a href="#imaging-imag" id="toc-imaging-imag" class="nav-link" data-scroll-target="#imaging-imag">Imaging (IMAG)</a></li>
+  <li><a href="#microbiome-micr" id="toc-microbiome-micr" class="nav-link" data-scroll-target="#microbiome-micr">Microbiome (MICR)</a></li>
+  <li><a href="#surgery-surg" id="toc-surgery-surg" class="nav-link" data-scroll-target="#surgery-surg">Surgery (SURG)</a></li>
   <li><a href="#radiotherapy-rt" id="toc-radiotherapy-rt" class="nav-link" data-scroll-target="#radiotherapy-rt">Radiotherapy (RT)</a></li>
   <li><a href="#biomarkers-biom" id="toc-biomarkers-biom" class="nav-link" data-scroll-target="#biomarkers-biom">Biomarkers (BIOM)</a></li>
-  <li><a href="#microbiome-micr" id="toc-microbiome-micr" class="nav-link" data-scroll-target="#microbiome-micr">Microbiome (MICR)</a></li>
-  <li><a href="#immunology-immu" id="toc-immunology-immu" class="nav-link" data-scroll-target="#immunology-immu">Immunology (IMMU)</a></li>
   </ul></li>
   <li><a href="#general-queries" id="toc-general-queries" class="nav-link" data-scroll-target="#general-queries">General queries</a>
   <ul class="collapse">
@@ -1132,15 +1132,6 @@ Show query
 </section>
 <section id="clinical-status-queries" class="level2">
 <h2 class="anchored" data-anchor-id="clinical-status-queries">Clinical Status queries</h2>
-<section id="clinical-trials-clin-trial" class="level3">
-<h3 class="anchored" data-anchor-id="clinical-trials-clin-trial">Clinical trials (CLIN-TRIAL)</h3>
-<details>
-<summary>
-Show query
-</summary>
-<pre class="litquery"><code>("Randomized Controlled Trial"[Publication Type] OR "Clinical Trial"[Publication Type] OR ((random*[ti] OR nonrandom*[ti] OR control*[ti] OR uncontrol*[ti] OR "Single-arm"[ti] OR phase[ti] OR "non-inferiority"[ti] OR "noninferiority"[ti] OR pragmatic[ti] OR superiority[ti] OR equivalence[ti] OR prospective[ti] OR "placebo*"[ti] OR blind*[ti]) AND (trial[ti] OR "Feasibility study"[ti])) OR ((clinical[ti] OR phase[ti]) AND (safe*[ti] OR effect*[ti] OR efficacy[ti] OR tolerability[ti]) AND (trial[ti] OR ((study[ti]) AND (random*[ti] OR "single-arm"[ti] OR center*[ti] OR centre*[ti] OR multicent*[ti] OR monocent*[ti] OR singlecent*[ti])))) OR "dose escalation study"[ti] OR "dose escalation trial"[ti] OR "clinical trial"[ti] OR "non-inferiority study"[ti] OR "noninferiority study"[ti] OR "superiority study"[ti] OR "equivalence study"[ti] OR "controlled study"[ti] OR "phase 0 study"[ti] OR "phase I study"[ti] OR "phase Ia study"[ti] OR "phase Ib study"[ti] OR "phase I/Ib study"[ti] OR "phase Ia/Ib study"[ti] OR "phase I/II study"[ti] OR "phase II study"[ti] OR "phase III study"[ti] OR "phase 1 study"[ti] OR "phase 1a study"[ti] OR "phase 1b study"[ti] OR "phase 1/1b study"[ti] OR "phase 1/2 study"[ti] OR "phase 2 study"[ti] OR "phase 3 study"[ti] OR "phase 4 study"[ti]) NOT ("Animals"[Mesh] OR "Models, Animal"[Mesh] NOT humans[mh]) NOT ("Meta-Analysis"[Publication Type] OR "Meta-Analysis as Topic"[Mesh] OR metaanaly*[tiab] OR "meta-analy*"[tiab] OR metanaly*[tiab] OR "Systematic Review"[Publication Type] OR systematic[sb] OR "Cochrane Database Syst Rev"[Journal] OR prisma[tiab] OR "preferred reporting items"[tiab] OR prospero[tiab] OR ((systemati*[ti] OR scoping[ti] OR umbrella[ti] OR "structured literature"[ti]) AND (review*[ti] OR overview*[ti])) OR "systematic review*"[tiab] OR "scoping review*"[tiab] OR "umbrella review*"[tiab] OR "structured literature review*"[tiab] OR "systematic qualitative review*"[tiab] OR "systematic quantitative review*"[tiab] OR "systematic search and review"[tiab] OR "systematized review*"[tiab] OR "systematised review*"[tiab] OR "systemic review*"[tiab] OR "systematic literature review*"[tiab] OR "systematic integrative literature review*"[tiab] OR "systematically review*"[tiab] OR "scoping literature review*"[tiab] OR "systematic critical review*"[tiab] OR "systematic integrative review*"[tiab] OR "systematic evidence review*"[tiab] OR "Systematic integrative literature review*"[tiab] OR "Systematic mixed studies review*"[tiab] OR "Systematized literature review*"[tiab] OR "Systematic overview*"[tiab] OR "Systematic narrative review*"[tiab] OR ((systemati*[tiab] OR literature[tiab] OR database*[tiab] OR "data-base*"[tiab] OR structured[tiab] OR comprehensive*[tiab] OR systemic*[tiab]) AND search*[tiab]) OR (Literature[ti] AND review[ti] AND (database*[tiab] OR "data-base*"[tiab] OR search*[tiab])) OR (("data extraction"[tiab] OR "data source*"[tiab]) AND "study selection"[tiab]) OR ("search strateg*"[tiab] AND "selection criteri*"[tiab]) OR ("data source*"[tiab] AND "data synthes*"[tiab]) OR medline[tiab] OR pubmed[tiab] OR embase[tiab] OR Cochrane[tiab] OR ((critical[ti] OR rapid[ti]) AND (review*[ti] OR overview*[ti] OR synthes*[ti])) OR (((critical*[tiab] OR rapid*[tiab]) AND (review*[tiab] OR overview*[tiab] OR synthes*[tiab]) AND (search*[tiab] OR database*[tiab] OR "data-base*"[tiab]))) OR metasynthes*[tiab] OR "meta-synthes*"[tiab] OR "Review"[Publication Type] OR "Review Literature as Topic"[Mesh]) NOT (letter[pt] OR comment[pt] OR editorial[pt] OR "Letter to the Editor*"[ti] OR reply[ti] OR comment[ti])</code></pre>
-</details>
-</section>
 <section id="clinical-data-clin-data" class="level3">
 <h3 class="anchored" data-anchor-id="clinical-data-clin-data">Clinical data (CLIN-DATA)</h3>
 <details>
@@ -1168,18 +1159,18 @@ Show query
 <pre class="litquery"><code>("Guideline"[Publication Type] OR ((consensus[ti] OR guideline*[ti] OR recommend*[ti] OR "best practice*"[ti] OR "position paper"[ti] OR "position statement"[ti]) AND (committee*[ti] OR society[ti] OR summit*[ti] OR "working group"[ti] OR "expert group"[ti] OR association[ti] OR esmo[ti] OR asco[ti] OR esgo[ti] OR nccn[ti] OR estro[ti] OR enets[ti] OR eortc[ti] OR esge[ti] OR emqn[ti] OR eusoma[ti] OR refcor[ti] OR mascc[ti]) AND (national*[ti] OR international*[ti] OR America*[ti] OR canad*[ti] OR ontario[ti] OR alberta[ti] OR Europe*[ti] OR dutch[ti] OR belgi*[ti] OR swiss*[ti] OR bosnia[ti] OR ital*[ti] OR french[ti] OR France[ti] OR german*[ti] OR spain[ti] OR Spanish[ti] OR British[ti] OR "united kingdom"[ti] OR Austria*[ti] OR swed*[ti] OR norw*[ti] OR Australia*[ti] OR "new zealand*"[ti] OR africa*[ti] OR asia*[ti] OR Korea*[ti] OR Japan*[ti] OR china[ti] OR Chinese[ti] OR india*[ti]))) NOT (adher*[ti] OR comparison*[ti])</code></pre>
 </details>
 </section>
-</section>
-<section id="topic-queries" class="level2">
-<h2 class="anchored" data-anchor-id="topic-queries">Topic queries</h2>
-<section id="surgery-surg" class="level3">
-<h3 class="anchored" data-anchor-id="surgery-surg">Surgery (SURG)</h3>
+<section id="clinical-trials-clin-trial" class="level3">
+<h3 class="anchored" data-anchor-id="clinical-trials-clin-trial">Clinical trials (CLIN-TRIAL)</h3>
 <details>
 <summary>
 Show query
 </summary>
-<pre class="litquery"><code>"Surgical Procedures, Operative"[Mesh:NoExp] OR "Ablation Techniques"[Mesh] OR "Ambulatory Surgical Procedures"[Mesh] OR "Anastomosis, Surgical"[Mesh] OR "Anterior Temporal Lobectomy"[Mesh] OR "Bariatric Surgery"[Mesh] OR "Cardiovascular Surgical Procedures"[Mesh] OR "Cytoreduction Surgical Procedures"[Mesh] OR "Debridement"[Mesh] OR "Decompression, Surgical"[Mesh] OR "Deep Brain Stimulation"[Mesh] OR "Device Removal"[Mesh] OR "Digestive System Surgical Procedures"[Mesh] OR "Drainage"[Mesh] OR "Electrosurgery"[Mesh] OR "Elective Surgical Procedures"[Mesh] OR "Endocrine Surgical Procedures"[Mesh] OR "Fasciotomy"[Mesh] OR "Hemostasis, Surgical"[Mesh] OR "Keratectomy"[Mesh] OR "Laparotomy"[Mesh] OR "Ligation"[Mesh] OR "Lymph Node Excision"[Mesh] OR "Mastectomy"[Mesh] OR "Metastasectomy"[Mesh] OR "Microsurgery"[Mesh] OR "Minimally Invasive Surgical Procedures"[Mesh] OR "Minor Surgical Procedures"[Mesh] OR "Monitoring, Intraoperative"[Mesh] OR "Myotomy"[Mesh] OR "Neurosurgical Procedures"[Mesh] OR "Obstetric Surgical Procedures"[Mesh] OR "Ophthalmologic Surgical Procedures"[Mesh] OR "Oral Surgical Procedures"[Mesh] OR "Orthopedic Procedures"[Mesh] OR "Ostomy"[Mesh] OR "Otorhinolaryngologic Surgical Procedures"[Mesh] OR "Pelvic Exenteration"[Mesh] OR "Perioperative Care"[Mesh] OR "Perioperative Period"[Mesh] OR "Plastic Surgery Procedures"[Mesh] OR "Pneumonectomy"[Mesh] OR "Prophylactic Surgical Procedures"[Mesh] OR "Prosthesis Implantation"[Mesh] OR "Reoperation"[Mesh] OR "Splenectomy"[Mesh] OR "Surgery, Computer-Assisted"[Mesh] OR "Symphysiotomy"[Mesh] OR "Thoracic Surgical Procedures"[Mesh] OR "Transplantation"[Mesh] OR "Ultrasonic Surgical Procedures"[Mesh] OR "Urogenital Surgical Procedures"[Mesh] OR "Wound Closure Techniques"[Mesh] OR surger*[ti] OR Neurosurger*[ti] OR surgical*[ti] OR surgeon*[ti] OR postsurg*[ti] OR incisi*[ti] OR excisi*[ti] OR Resecti*[ti] OR operation*[ti] OR operative*[ti] OR perioperati*[ti] OR intraoperati*[ti] OR Postoperative[ti] OR "Anastomosis, Surgical"[Mesh:NoExp] OR "Roux-en-Y"[ti] OR "Cholecystostomy"[Mesh] OR "Cholecystostom*"[ti] OR "Choledochostomy"[Mesh] OR "Choledochostom*"[ti] OR Choledochojejunostom*[ti] OR Choledochoduodenostom*[ti] OR "Gastroenterostomy"[Mesh] OR "Gastroenterostom*"[ti] OR Gastroenterostom*[ti] OR gastroduodenostomy*[ti] OR Billroth*[ti] OR "Jejunoileal Bypass"[Mesh] OR "Jejunoileal Bypass*"[ti] OR "Jejuno-Ileal Bypass*"[ti] OR "Ileojejunal Bypass*"[ti] OR "Intestinal Bypass*"[ti] OR "Pancreaticojejunostomy"[Mesh] OR "Pancreaticojejunostom*"[ti] OR Pancreatojejunostom*[ti] OR "Portoenterostomy, Hepatic"[Mesh] OR "Hepatic Portoenterostom*"[ti] OR "Hepatoportoenterostom*"[ti] OR "Kasai Procedure*"[ti] OR "Bariatric Surgery"[Mesh:NoExp] OR "Gastric Bypass"[Mesh] OR Gastrojejunostom*[ti] OR "Gastroileal Bypass*"[ti] OR "Gastroplasty"[Mesh] OR Gastroplast*[ti] OR "Digestive System Surgical Procedures"[Mesh] OR "Appendectomy"[Mesh] OR "Appendectom*"[ti] OR "Biliopancreatic Diversion*"[ti] OR "Biliopancreatic Bypass*"[ti] OR "Bilio pancreatic Diversion*"[ti] OR "Bilio pancreatic Bypass*"[ti] OR Cholecystectom*[ti] OR Sphincterotom*[ti] OR Papillotom*[ti] OR Sphincteroplast*[ti] OR Colectom*[ti] OR Hemicolectom*[ti] OR Proctocolectom*[ti] OR Coloproctectom*[ti] OR Proctocolectom*[ti] OR "Anal Anastomos*"[ti] OR Enterostom*[ti] OR Cecostom*[ti] OR Colostom*[ti] OR Duodenostom*[ti] OR Ileostom*[ti] OR Jejunostom*[ti] OR Esophagectom*[ti] OR Esophagoplast*[ti] OR Esophagostom*[ti] OR Fundoplication*[ti] OR "Nissen Operation*"[ti] OR Gastrectom*[ti] OR Pyloromyotom*[ti] OR Gastropex*[ti] OR Gastrostom*[ti] OR ((Myotom*[ti] OR Cardiomyotom*[ti]) AND Heller*[ti]) OR Hemorrhoidectom*[ti] OR Hepatectom*[ti] OR Pancreatectom*[ti] OR Duodenopancreatectom*[ti] OR Pancreatoduodenectom*[ti] OR Proctectom*[ti] OR "kidney transplantation*"[ti] OR "renal transplantation*"[ti] OR "liver transplantation*"[ti] OR "hepatic transplantation*"[ti] OR "pancreas transplantation*"[ti] OR "Urogenital Surgical Procedures"[Mesh] OR Gonadectom*[ti] OR Orchiectom*[ti] OR Orchidectom*[ti] OR Ovariectom*[ti] OR Oophorectom*[ti] OR Colpotom*[ti] OR "Endometrial Ablation*"[ti] OR Hysterectom*[ti] OR Colpohysterectom*[ti] OR Trachelectom*[ti] OR Cervicectom*[ti] OR Salpingectom*[ti] OR Tubectom*[ti] OR Salpingostom*[ti] OR "Cooke Method"[ti] OR "Fimbriectom*"[ti] OR "Irving Method"[ti] OR "Tubal Ligation*"[ti] OR "Madlener Method"[ti] OR "Pomeroy Method"[ti] OR "Tubal Ring*"[ti] OR "Tubal Occlusion*"[ti] OR "Uchida Method"[ti] OR Vasectom*[ti] OR "Vas Ligation*"[ti] OR "Vas Occlusion*"[ti] OR "Intravasal Thread*"[ti] OR "Uterine Artery Embolization*"[ti] OR "Myomectom*"[ti] OR Vulvectom*[ti] OR "Fallopian Tube Reanastomos*"[ti] OR "Tubal Reanastomos*"[ti] OR (Vas[ti] AND Reanastomos*[ti]) OR Vasovasostom*[ti] OR Vasostom*[ti] OR Prostatectom*[ti] OR "Penile Implantation*"[ti] OR "Penile Prosthesis Implantation*"[ti] OR Circumcision*[ti] OR Orchiopex*[ti] OR Orchidopex*[ti] OR "cystectom*"[Title] OR "cystotom*"[Title] OR "vesicotom*"[Title] OR "nephrectom*"[Title] OR "heminephrectom*"[Title] OR "nephroureterectom*"[Title] OR "nephro ureterectom*"[Title] OR "ureteronephrectom*"[Title] OR "heminephroureterectom*"[Title] OR "nephrolithotom*"[Title] OR "nephrotom*"[Title] OR "nephrostom*"[Title] OR "pyelostom*"[Title] OR "urinary diversion*"[Title] OR "ileal conduit*"[Title] OR "cystostom*"[Title] OR "vesicostom*"[Title] OR "ureterostom*"[Title] OR peritonectom*[ti]</code></pre>
+<pre class="litquery"><code>("Randomized Controlled Trial"[Publication Type] OR "Clinical Trial"[Publication Type] OR ((random*[ti] OR nonrandom*[ti] OR control*[ti] OR uncontrol*[ti] OR "Single-arm"[ti] OR phase[ti] OR "non-inferiority"[ti] OR "noninferiority"[ti] OR pragmatic[ti] OR superiority[ti] OR equivalence[ti] OR prospective[ti] OR "placebo*"[ti] OR blind*[ti]) AND (trial[ti] OR "Feasibility study"[ti])) OR ((clinical[ti] OR phase[ti]) AND (safe*[ti] OR effect*[ti] OR efficacy[ti] OR tolerability[ti]) AND (trial[ti] OR ((study[ti]) AND (random*[ti] OR "single-arm"[ti] OR center*[ti] OR centre*[ti] OR multicent*[ti] OR monocent*[ti] OR singlecent*[ti])))) OR "dose escalation study"[ti] OR "dose escalation trial"[ti] OR "clinical trial"[ti] OR "non-inferiority study"[ti] OR "noninferiority study"[ti] OR "superiority study"[ti] OR "equivalence study"[ti] OR "controlled study"[ti] OR "phase 0 study"[ti] OR "phase I study"[ti] OR "phase Ia study"[ti] OR "phase Ib study"[ti] OR "phase I/Ib study"[ti] OR "phase Ia/Ib study"[ti] OR "phase I/II study"[ti] OR "phase II study"[ti] OR "phase III study"[ti] OR "phase 1 study"[ti] OR "phase 1a study"[ti] OR "phase 1b study"[ti] OR "phase 1/1b study"[ti] OR "phase 1/2 study"[ti] OR "phase 2 study"[ti] OR "phase 3 study"[ti] OR "phase 4 study"[ti]) NOT ("Animals"[Mesh] OR "Models, Animal"[Mesh] NOT humans[mh]) NOT ("Meta-Analysis"[Publication Type] OR "Meta-Analysis as Topic"[Mesh] OR metaanaly*[tiab] OR "meta-analy*"[tiab] OR metanaly*[tiab] OR "Systematic Review"[Publication Type] OR systematic[sb] OR "Cochrane Database Syst Rev"[Journal] OR prisma[tiab] OR "preferred reporting items"[tiab] OR prospero[tiab] OR ((systemati*[ti] OR scoping[ti] OR umbrella[ti] OR "structured literature"[ti]) AND (review*[ti] OR overview*[ti])) OR "systematic review*"[tiab] OR "scoping review*"[tiab] OR "umbrella review*"[tiab] OR "structured literature review*"[tiab] OR "systematic qualitative review*"[tiab] OR "systematic quantitative review*"[tiab] OR "systematic search and review"[tiab] OR "systematized review*"[tiab] OR "systematised review*"[tiab] OR "systemic review*"[tiab] OR "systematic literature review*"[tiab] OR "systematic integrative literature review*"[tiab] OR "systematically review*"[tiab] OR "scoping literature review*"[tiab] OR "systematic critical review*"[tiab] OR "systematic integrative review*"[tiab] OR "systematic evidence review*"[tiab] OR "Systematic integrative literature review*"[tiab] OR "Systematic mixed studies review*"[tiab] OR "Systematized literature review*"[tiab] OR "Systematic overview*"[tiab] OR "Systematic narrative review*"[tiab] OR ((systemati*[tiab] OR literature[tiab] OR database*[tiab] OR "data-base*"[tiab] OR structured[tiab] OR comprehensive*[tiab] OR systemic*[tiab]) AND search*[tiab]) OR (Literature[ti] AND review[ti] AND (database*[tiab] OR "data-base*"[tiab] OR search*[tiab])) OR (("data extraction"[tiab] OR "data source*"[tiab]) AND "study selection"[tiab]) OR ("search strateg*"[tiab] AND "selection criteri*"[tiab]) OR ("data source*"[tiab] AND "data synthes*"[tiab]) OR medline[tiab] OR pubmed[tiab] OR embase[tiab] OR Cochrane[tiab] OR ((critical[ti] OR rapid[ti]) AND (review*[ti] OR overview*[ti] OR synthes*[ti])) OR (((critical*[tiab] OR rapid*[tiab]) AND (review*[tiab] OR overview*[tiab] OR synthes*[tiab]) AND (search*[tiab] OR database*[tiab] OR "data-base*"[tiab]))) OR metasynthes*[tiab] OR "meta-synthes*"[tiab] OR "Review"[Publication Type] OR "Review Literature as Topic"[Mesh]) NOT (letter[pt] OR comment[pt] OR editorial[pt] OR "Letter to the Editor*"[ti] OR reply[ti] OR comment[ti])</code></pre>
 </details>
 </section>
+</section>
+<section id="topic-queries" class="level2">
+<h2 class="anchored" data-anchor-id="topic-queries">Topic queries</h2>
 <section id="chemotherapy-cht" class="level3">
 <h3 class="anchored" data-anchor-id="chemotherapy-cht">Chemotherapy (ChT)</h3>
 <details>
@@ -1189,6 +1180,15 @@ Show query
 <pre class="litquery"><code>(((chemotherap*[ti] OR "chemo therap*"[ti]) NOT ("Tuberculosis"[Mesh] OR tuberculosis[ti] OR "Leishmaniasis"[Mesh] OR Leishman*[ti])) OR hipec[ti] OR chemoimmunotherap*[ti] OR immunochemotherap*[ti] OR "chemo immunotherap*"[ti] OR Chemoradiotherap*[ti] OR radiochemotherap*[ti] OR "chemoradiation*"[ti] OR "chemo radiation*"[ti] OR Chemoembolizati*[ti] OR "Chemo embolizati*"[ti] OR Cisplatin*[ti] OR Oxaliplatin*[ti] OR carboplatin*[ti] OR paclitaxel*[ti] OR "pt iv*"[ti] OR Temozolomide[ti] OR doxorubicin[ti] OR gemcitabin*[ti] OR capecitabin*[ti] OR 5-Fluorouracil*[ti] OR "5-fu"[ti] OR folfiri*[ti] OR etoposide*[ti] OR irinotecan[ti] OR CAPOX[ti] OR folfox*[ti] OR "r chop*"[ti] OR fluoropyrimidine*[ti] OR cyclophosphamide*[ti])</code></pre>
 </details>
 </section>
+<section id="immunology-immu" class="level3">
+<h3 class="anchored" data-anchor-id="immunology-immu">Immunology (IMMU)</h3>
+<details>
+<summary>
+Show query
+</summary>
+<pre class="litquery"><code>("Lymphocytes, Tumor-Infiltrating"[Mesh] OR "Tumor Escape"[Mesh] OR "Immune System Phenomena"[Mesh] OR "Immune Checkpoint Inhibitors"[Mesh] OR chemoimmunotherap*[ti] OR "immune chemotherap*"[ti] OR "Radioimmunotherap*"[ti] OR "immunoradiotherap*"[ti] OR immunoradiation*[ti] OR pembrolizumab[ti] OR nivolumab[ti] OR camrelizumab[ti] OR sintilimab[ti] OR atezolizumab[ti] OR durvalumab[ti] OR avelumab[ti] OR ipilimumab[ti] OR tremelimumab[ti] OR Relatlimab[ti] OR Immunostimulat*[ti] OR Immunosurv*[ti] OR "immune system*"[ti] OR "immune response*"[ti] OR (Tumo*[ti] AND infiltrate*[ti] AND lymphocyte*[ti]) OR "t cell antitumor*"[ti] OR "t cell anti tumor*"[ti] OR immunotherap*[ti] OR immunosuppressi*[ti] OR immunological*[ti] OR immunogen*[ti] OR immunomodulat*[ti] OR immunoregulatory[ti] OR immunity[ti] OR autoimmunity[ti] OR "immune cell*"[ti] OR "immune gene*"[ti] OR "immune regulat*"[ti] OR "immune status*"[ti] OR "immune metabol*"[ti] OR "immune related"[ti] OR "immunoinfiltr*"[ti] OR "Immuno stimulat*"[ti] OR "Immuno surv*"[ti] OR "Immune stimulat*"[ti] OR "Immune surv*"[ti] OR vaccin*[ti] OR "chimeric antigen receptor*"[ti] OR "t cell receptor*"[ti] OR tcr[ti] OR "car t*"[ti] OR "car nk*"[ti] OR ((car[ti]) AND (t[ti] OR nk[ti])) OR (Adoptive[ti] OR til[ti]) AND (transfer*[ti] OR therap*[ti]) OR Sipuleucel*[ti] OR "antibody drug conjugate*"[ti] OR "Antibody-dependent cellular cytotoxicity*"[ti] OR adcc[ti] OR "bispecific antibod*"[ti] OR "bispecific t cell*"[ti] OR "antigen present*"[ti] OR neoantigen*[ti] OR "neo-antigen*"[ti] OR (("mutation*"[ti]) AND (burden*[ti] OR load*[ti])) OR "tertiary lymph*"[ti] OR inflam*[ti] OR "cytotoxic T-lymphocyte-associated protein*"[ti] OR ctla4[ti] OR "ctla 4"[ti] OR "programmed death*"[ti] OR "Programmed cell death*"[ti] OR pd1[ti] OR "pd 1"[ti] OR pdl1[ti] OR pdl2[ti] OR "pd l*"[ti] OR lag3[ti] OR "lag 3"[ti] OR tim3[ti] OR "tim 3"[ti] OR vista[ti] OR pbmc*[ti] OR cd4[ti] OR cd8[ti] OR granzyme*[ti] OR perforin*[ti] OR interferon*[ti] OR sting[ti] OR foxp3[ti] OR "dendritic cell*"[ti] OR "regulatory t cell*"[ti] OR treg[ti] OR tregs[ti] OR monocyt*[ti] OR CD14[ti] OR macrophage*[ti] OR macrophagocyt*[ti] OR phagocyt*[ti] OR CD163[ti] OR CD206[ti] OR eosinophil*[ti] OR granulocyt*[ti] OR neutrophil*[ti] OR basophil*[ti] OR "Myeloid Derived Suppres*"[ti] OR MDSC*[ti] OR virus*[ti] OR viral*[ti] OR antiviral*[ti] OR Cytokine*[ti] OR antibod*[ti] OR ((Immun*[ti] OR lymphocyt*[ti] OR "NK cell*"[ti] OR "Natural killer*"[ti] OR "NKT"[ti] OR "t cell*"[ti] OR "B cell*"[ti] OR myeloid[ti] OR th17[ti] OR th1[ti] OR th2[ti]) AND (checkpoint*[ti] OR Evasion*[ti] OR evad*[ti] OR escap*[ti] OR resist*[ti] OR modulat*[ti] OR suppress*[ti] OR sensitiv*[ti] OR infiltrat*[ti] OR subtype*[ti] OR landscape*[ti] OR microenvironment*[ti] OR environment*[ti] OR recruit*[ti] OR activat*[ti] OR exhaust*[ti] OR cytotoxic*[ti] OR killing[ti] OR function*[ti] OR eliminat*[ti] OR clearance*[ti] OR response*[ti] OR therap*[ti] OR recogni*[ti] OR signature*[ti] OR memory[ti])))</code></pre>
+</details>
+</section>
 <section id="imaging-imag" class="level3">
 <h3 class="anchored" data-anchor-id="imaging-imag">Imaging (IMAG)</h3>
 <details>
@@ -1196,6 +1196,24 @@ Show query
 Show query
 </summary>
 <pre class="litquery"><code>("Diagnostic Imaging"[Mesh] OR image*[ti] OR imaging[ti] OR tomogra*[ti] OR CT[ti] OR CAT[ti] OR spect[ti] OR petscan*[ti] OR "pet"[ti] OR radionuclid*[ti] OR ((magneti*[ti] OR "chemical shift*"[ti]) AND (image[ti] OR imaging[ti])) OR mri[ti] OR mris[ti] OR fmri[ti] OR fmris[ti] OR nmr[ti] OR mra[ti] OR mras[ti] OR zeugmatograph*[ti] OR "mr tomograph*"[ti] OR "proton spin*"[ti] OR "spin relaxation*"[ti] OR ultraso*[ti] OR sonograph*[ti] OR echograph*[ti] OR echocardiograph*[ti] OR echotomograph*[ti] OR mammograph*[ti] OR mammogram*[ti])</code></pre>
+</details>
+</section>
+<section id="microbiome-micr" class="level3">
+<h3 class="anchored" data-anchor-id="microbiome-micr">Microbiome (MICR)</h3>
+<details>
+<summary>
+Show query
+</summary>
+<pre class="litquery"><code>"Microbiota"[Mesh:NoExp] OR "Gastrointestinal Microbiome"[Mesh] OR Microbiome*[ti] OR Microbiota*[ti] OR Microflora*[ti] OR "intestinal flora"[ti] OR "gut flora"[ti] OR "intestinal bacter*"[ti] OR "gut bacter*"[ti] OR "intestinal microb*"[ti] OR "gut microb*"[ti] OR "intestinal microb*"[ti] OR "gut microb*"[ti] OR probiotic*[ti] OR prebiotic*[ti]</code></pre>
+</details>
+</section>
+<section id="surgery-surg" class="level3">
+<h3 class="anchored" data-anchor-id="surgery-surg">Surgery (SURG)</h3>
+<details>
+<summary>
+Show query
+</summary>
+<pre class="litquery"><code>"Surgical Procedures, Operative"[Mesh:NoExp] OR "Ablation Techniques"[Mesh] OR "Ambulatory Surgical Procedures"[Mesh] OR "Anastomosis, Surgical"[Mesh] OR "Anterior Temporal Lobectomy"[Mesh] OR "Bariatric Surgery"[Mesh] OR "Cardiovascular Surgical Procedures"[Mesh] OR "Cytoreduction Surgical Procedures"[Mesh] OR "Debridement"[Mesh] OR "Decompression, Surgical"[Mesh] OR "Deep Brain Stimulation"[Mesh] OR "Device Removal"[Mesh] OR "Digestive System Surgical Procedures"[Mesh] OR "Drainage"[Mesh] OR "Electrosurgery"[Mesh] OR "Elective Surgical Procedures"[Mesh] OR "Endocrine Surgical Procedures"[Mesh] OR "Fasciotomy"[Mesh] OR "Hemostasis, Surgical"[Mesh] OR "Keratectomy"[Mesh] OR "Laparotomy"[Mesh] OR "Ligation"[Mesh] OR "Lymph Node Excision"[Mesh] OR "Mastectomy"[Mesh] OR "Metastasectomy"[Mesh] OR "Microsurgery"[Mesh] OR "Minimally Invasive Surgical Procedures"[Mesh] OR "Minor Surgical Procedures"[Mesh] OR "Monitoring, Intraoperative"[Mesh] OR "Myotomy"[Mesh] OR "Neurosurgical Procedures"[Mesh] OR "Obstetric Surgical Procedures"[Mesh] OR "Ophthalmologic Surgical Procedures"[Mesh] OR "Oral Surgical Procedures"[Mesh] OR "Orthopedic Procedures"[Mesh] OR "Ostomy"[Mesh] OR "Otorhinolaryngologic Surgical Procedures"[Mesh] OR "Pelvic Exenteration"[Mesh] OR "Perioperative Care"[Mesh] OR "Perioperative Period"[Mesh] OR "Plastic Surgery Procedures"[Mesh] OR "Pneumonectomy"[Mesh] OR "Prophylactic Surgical Procedures"[Mesh] OR "Prosthesis Implantation"[Mesh] OR "Reoperation"[Mesh] OR "Splenectomy"[Mesh] OR "Surgery, Computer-Assisted"[Mesh] OR "Symphysiotomy"[Mesh] OR "Thoracic Surgical Procedures"[Mesh] OR "Transplantation"[Mesh] OR "Ultrasonic Surgical Procedures"[Mesh] OR "Urogenital Surgical Procedures"[Mesh] OR "Wound Closure Techniques"[Mesh] OR surger*[ti] OR Neurosurger*[ti] OR surgical*[ti] OR surgeon*[ti] OR postsurg*[ti] OR incisi*[ti] OR excisi*[ti] OR Resecti*[ti] OR operation*[ti] OR operative*[ti] OR perioperati*[ti] OR intraoperati*[ti] OR Postoperative[ti] OR "Anastomosis, Surgical"[Mesh:NoExp] OR "Roux-en-Y"[ti] OR "Cholecystostomy"[Mesh] OR "Cholecystostom*"[ti] OR "Choledochostomy"[Mesh] OR "Choledochostom*"[ti] OR Choledochojejunostom*[ti] OR Choledochoduodenostom*[ti] OR "Gastroenterostomy"[Mesh] OR "Gastroenterostom*"[ti] OR Gastroenterostom*[ti] OR gastroduodenostomy*[ti] OR Billroth*[ti] OR "Jejunoileal Bypass"[Mesh] OR "Jejunoileal Bypass*"[ti] OR "Jejuno-Ileal Bypass*"[ti] OR "Ileojejunal Bypass*"[ti] OR "Intestinal Bypass*"[ti] OR "Pancreaticojejunostomy"[Mesh] OR "Pancreaticojejunostom*"[ti] OR Pancreatojejunostom*[ti] OR "Portoenterostomy, Hepatic"[Mesh] OR "Hepatic Portoenterostom*"[ti] OR "Hepatoportoenterostom*"[ti] OR "Kasai Procedure*"[ti] OR "Bariatric Surgery"[Mesh:NoExp] OR "Gastric Bypass"[Mesh] OR Gastrojejunostom*[ti] OR "Gastroileal Bypass*"[ti] OR "Gastroplasty"[Mesh] OR Gastroplast*[ti] OR "Digestive System Surgical Procedures"[Mesh] OR "Appendectomy"[Mesh] OR "Appendectom*"[ti] OR "Biliopancreatic Diversion*"[ti] OR "Biliopancreatic Bypass*"[ti] OR "Bilio pancreatic Diversion*"[ti] OR "Bilio pancreatic Bypass*"[ti] OR Cholecystectom*[ti] OR Sphincterotom*[ti] OR Papillotom*[ti] OR Sphincteroplast*[ti] OR Colectom*[ti] OR Hemicolectom*[ti] OR Proctocolectom*[ti] OR Coloproctectom*[ti] OR Proctocolectom*[ti] OR "Anal Anastomos*"[ti] OR Enterostom*[ti] OR Cecostom*[ti] OR Colostom*[ti] OR Duodenostom*[ti] OR Ileostom*[ti] OR Jejunostom*[ti] OR Esophagectom*[ti] OR Esophagoplast*[ti] OR Esophagostom*[ti] OR Fundoplication*[ti] OR "Nissen Operation*"[ti] OR Gastrectom*[ti] OR Pyloromyotom*[ti] OR Gastropex*[ti] OR Gastrostom*[ti] OR ((Myotom*[ti] OR Cardiomyotom*[ti]) AND Heller*[ti]) OR Hemorrhoidectom*[ti] OR Hepatectom*[ti] OR Pancreatectom*[ti] OR Duodenopancreatectom*[ti] OR Pancreatoduodenectom*[ti] OR Proctectom*[ti] OR "kidney transplantation*"[ti] OR "renal transplantation*"[ti] OR "liver transplantation*"[ti] OR "hepatic transplantation*"[ti] OR "pancreas transplantation*"[ti] OR "Urogenital Surgical Procedures"[Mesh] OR Gonadectom*[ti] OR Orchiectom*[ti] OR Orchidectom*[ti] OR Ovariectom*[ti] OR Oophorectom*[ti] OR Colpotom*[ti] OR "Endometrial Ablation*"[ti] OR Hysterectom*[ti] OR Colpohysterectom*[ti] OR Trachelectom*[ti] OR Cervicectom*[ti] OR Salpingectom*[ti] OR Tubectom*[ti] OR Salpingostom*[ti] OR "Cooke Method"[ti] OR "Fimbriectom*"[ti] OR "Irving Method"[ti] OR "Tubal Ligation*"[ti] OR "Madlener Method"[ti] OR "Pomeroy Method"[ti] OR "Tubal Ring*"[ti] OR "Tubal Occlusion*"[ti] OR "Uchida Method"[ti] OR Vasectom*[ti] OR "Vas Ligation*"[ti] OR "Vas Occlusion*"[ti] OR "Intravasal Thread*"[ti] OR "Uterine Artery Embolization*"[ti] OR "Myomectom*"[ti] OR Vulvectom*[ti] OR "Fallopian Tube Reanastomos*"[ti] OR "Tubal Reanastomos*"[ti] OR (Vas[ti] AND Reanastomos*[ti]) OR Vasovasostom*[ti] OR Vasostom*[ti] OR Prostatectom*[ti] OR "Penile Implantation*"[ti] OR "Penile Prosthesis Implantation*"[ti] OR Circumcision*[ti] OR Orchiopex*[ti] OR Orchidopex*[ti] OR "cystectom*"[Title] OR "cystotom*"[Title] OR "vesicotom*"[Title] OR "nephrectom*"[Title] OR "heminephrectom*"[Title] OR "nephroureterectom*"[Title] OR "nephro ureterectom*"[Title] OR "ureteronephrectom*"[Title] OR "heminephroureterectom*"[Title] OR "nephrolithotom*"[Title] OR "nephrotom*"[Title] OR "nephrostom*"[Title] OR "pyelostom*"[Title] OR "urinary diversion*"[Title] OR "ileal conduit*"[Title] OR "cystostom*"[Title] OR "vesicostom*"[Title] OR "ureterostom*"[Title] OR peritonectom*[ti]</code></pre>
 </details>
 </section>
 <section id="radiotherapy-rt" class="level3">
@@ -1214,24 +1232,6 @@ Show query
 Show query
 </summary>
 <pre class="litquery"><code>("Biomarkers"[Mesh] OR biomarker*[ti] OR marker*[ti] OR prognos*[ti] OR indicat*[ti] OR predict*[ti]) OR signature*[ti] OR ((correlat*[ti] OR "associated with"[ti]) AND (response*[ti] OR outcome*[ti] OR surviv*[ti] OR progressi*[ti] OR effect*[ti] OR efficacy*[ti] OR "clinical benefit*"[ti]))</code></pre>
-</details>
-</section>
-<section id="microbiome-micr" class="level3">
-<h3 class="anchored" data-anchor-id="microbiome-micr">Microbiome (MICR)</h3>
-<details>
-<summary>
-Show query
-</summary>
-<pre class="litquery"><code>"Microbiota"[Mesh:NoExp] OR "Gastrointestinal Microbiome"[Mesh] OR Microbiome*[ti] OR Microbiota*[ti] OR Microflora*[ti] OR "intestinal flora"[ti] OR "gut flora"[ti] OR "intestinal bacter*"[ti] OR "gut bacter*"[ti] OR "intestinal microb*"[ti] OR "gut microb*"[ti] OR "intestinal microb*"[ti] OR "gut microb*"[ti] OR probiotic*[ti] OR prebiotic*[ti]</code></pre>
-</details>
-</section>
-<section id="immunology-immu" class="level3">
-<h3 class="anchored" data-anchor-id="immunology-immu">Immunology (IMMU)</h3>
-<details>
-<summary>
-Show query
-</summary>
-<pre class="litquery"><code>("Lymphocytes, Tumor-Infiltrating"[Mesh] OR "Tumor Escape"[Mesh] OR "Immune System Phenomena"[Mesh] OR "Immune Checkpoint Inhibitors"[Mesh] OR chemoimmunotherap*[ti] OR "immune chemotherap*"[ti] OR "Radioimmunotherap*"[ti] OR "immunoradiotherap*"[ti] OR immunoradiation*[ti] OR pembrolizumab[ti] OR nivolumab[ti] OR camrelizumab[ti] OR sintilimab[ti] OR atezolizumab[ti] OR durvalumab[ti] OR avelumab[ti] OR ipilimumab[ti] OR tremelimumab[ti] OR Relatlimab[ti] OR Immunostimulat*[ti] OR Immunosurv*[ti] OR "immune system*"[ti] OR "immune response*"[ti] OR (Tumo*[ti] AND infiltrate*[ti] AND lymphocyte*[ti]) OR "t cell antitumor*"[ti] OR "t cell anti tumor*"[ti] OR immunotherap*[ti] OR immunosuppressi*[ti] OR immunological*[ti] OR immunogen*[ti] OR immunomodulat*[ti] OR immunoregulatory[ti] OR immunity[ti] OR autoimmunity[ti] OR "immune cell*"[ti] OR "immune gene*"[ti] OR "immune regulat*"[ti] OR "immune status*"[ti] OR "immune metabol*"[ti] OR "immune related"[ti] OR "immunoinfiltr*"[ti] OR "Immuno stimulat*"[ti] OR "Immuno surv*"[ti] OR "Immune stimulat*"[ti] OR "Immune surv*"[ti] OR vaccin*[ti] OR "chimeric antigen receptor*"[ti] OR "t cell receptor*"[ti] OR tcr[ti] OR "car t*"[ti] OR "car nk*"[ti] OR ((car[ti]) AND (t[ti] OR nk[ti])) OR (Adoptive[ti] OR til[ti]) AND (transfer*[ti] OR therap*[ti]) OR Sipuleucel*[ti] OR "antibody drug conjugate*"[ti] OR "Antibody-dependent cellular cytotoxicity*"[ti] OR adcc[ti] OR "bispecific antibod*"[ti] OR "bispecific t cell*"[ti] OR "antigen present*"[ti] OR neoantigen*[ti] OR "neo-antigen*"[ti] OR (("mutation*"[ti]) AND (burden*[ti] OR load*[ti])) OR "tertiary lymph*"[ti] OR inflam*[ti] OR "cytotoxic T-lymphocyte-associated protein*"[ti] OR ctla4[ti] OR "ctla 4"[ti] OR "programmed death*"[ti] OR "Programmed cell death*"[ti] OR pd1[ti] OR "pd 1"[ti] OR pdl1[ti] OR pdl2[ti] OR "pd l*"[ti] OR lag3[ti] OR "lag 3"[ti] OR tim3[ti] OR "tim 3"[ti] OR vista[ti] OR pbmc*[ti] OR cd4[ti] OR cd8[ti] OR granzyme*[ti] OR perforin*[ti] OR interferon*[ti] OR sting[ti] OR foxp3[ti] OR "dendritic cell*"[ti] OR "regulatory t cell*"[ti] OR treg[ti] OR tregs[ti] OR monocyt*[ti] OR CD14[ti] OR macrophage*[ti] OR macrophagocyt*[ti] OR phagocyt*[ti] OR CD163[ti] OR CD206[ti] OR eosinophil*[ti] OR granulocyt*[ti] OR neutrophil*[ti] OR basophil*[ti] OR "Myeloid Derived Suppres*"[ti] OR MDSC*[ti] OR virus*[ti] OR viral*[ti] OR antiviral*[ti] OR Cytokine*[ti] OR antibod*[ti] OR ((Immun*[ti] OR lymphocyt*[ti] OR "NK cell*"[ti] OR "Natural killer*"[ti] OR "NKT"[ti] OR "t cell*"[ti] OR "B cell*"[ti] OR myeloid[ti] OR th17[ti] OR th1[ti] OR th2[ti]) AND (checkpoint*[ti] OR Evasion*[ti] OR evad*[ti] OR escap*[ti] OR resist*[ti] OR modulat*[ti] OR suppress*[ti] OR sensitiv*[ti] OR infiltrat*[ti] OR subtype*[ti] OR landscape*[ti] OR microenvironment*[ti] OR environment*[ti] OR recruit*[ti] OR activat*[ti] OR exhaust*[ti] OR cytotoxic*[ti] OR killing[ti] OR function*[ti] OR eliminat*[ti] OR clearance*[ti] OR response*[ti] OR therap*[ti] OR recogni*[ti] OR signature*[ti] OR memory[ti])))</code></pre>
 </details>
 </section>
 </section>
@@ -1263,54 +1263,54 @@ Show query
 <h1>Abbreviations</h1>
 <section id="departments" class="level2">
 <h2 class="anchored" data-anchor-id="departments">Departments</h2>
-<div id="3183008c" class="cell" data-execution_count="2">
+<div id="63f01cb0" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display" data-execution_count="2">
 <style type="text/css">
-#T_7492c th:nth-child(1) {
+#T_0a45d th:nth-child(1) {
   width: 150px;
 }
-#T_7492c td:nth-child(1) {
+#T_0a45d td:nth-child(1) {
   width: 150px;
 }
-#T_7492c th:nth-child(2) {
+#T_0a45d th:nth-child(2) {
   width: 350px;
 }
-#T_7492c td:nth-child(2) {
+#T_0a45d td:nth-child(2) {
   width: 350px;
 }
-#T_7492c  {
+#T_0a45d  {
   max-height: 500px;
   overflow-y: auto;
   display: block;
 }
-#T_7492c_row0_col0, #T_7492c_row0_col1, #T_7492c_row1_col0, #T_7492c_row1_col1, #T_7492c_row2_col0, #T_7492c_row2_col1, #T_7492c_row3_col0, #T_7492c_row3_col1 {
+#T_0a45d_row0_col0, #T_0a45d_row0_col1, #T_0a45d_row1_col0, #T_0a45d_row1_col1, #T_0a45d_row2_col0, #T_0a45d_row2_col1, #T_0a45d_row3_col0, #T_0a45d_row3_col1 {
   text-align: left;
 }
 </style>
 
-<table id="T_7492c" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<table id="T_0a45d" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_7492c_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Abbreviation</th>
-<th id="T_7492c_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Department</th>
+<th id="T_0a45d_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Abbreviation</th>
+<th id="T_0a45d_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Department</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_7492c_row0_col0" class="data row0 col0">CRM</td>
-<td id="T_7492c_row0_col1" class="data row0 col1">Center for Reproductive Medicine</td>
+<td id="T_0a45d_row0_col0" class="data row0 col0">CRM</td>
+<td id="T_0a45d_row0_col1" class="data row0 col1">Center for Reproductive Medicine</td>
 </tr>
 <tr class="even">
-<td id="T_7492c_row1_col0" class="data row1 col0">E&amp;G</td>
-<td id="T_7492c_row1_col1" class="data row1 col1">Endometriosis &amp; Gynaecology</td>
+<td id="T_0a45d_row1_col0" class="data row1 col0">E&amp;G</td>
+<td id="T_0a45d_row1_col1" class="data row1 col1">Endometriosis &amp; Gynaecology</td>
 </tr>
 <tr class="odd">
-<td id="T_7492c_row2_col0" class="data row2 col0">GO</td>
-<td id="T_7492c_row2_col1" class="data row2 col1">Gynaecologic Oncology</td>
+<td id="T_0a45d_row2_col0" class="data row2 col0">GO</td>
+<td id="T_0a45d_row2_col1" class="data row2 col1">Gynaecologic Oncology</td>
 </tr>
 <tr class="even">
-<td id="T_7492c_row3_col0" class="data row3 col0">PDO</td>
-<td id="T_7492c_row3_col1" class="data row3 col1">Prenatal Diagnostics &amp; Obstetrics</td>
+<td id="T_0a45d_row3_col0" class="data row3 col0">PDO</td>
+<td id="T_0a45d_row3_col1" class="data row3 col1">Prenatal Diagnostics &amp; Obstetrics</td>
 </tr>
 </tbody>
 </table>
@@ -1320,258 +1320,258 @@ Show query
 <section id="institutes" class="level2">
 <h2 class="anchored" data-anchor-id="institutes">Institutes</h2>
 <p>Scroll down for more institutes.</p>
-<div id="e67cd48b" class="cell" data-execution_count="3">
+<div id="4ccbd78f" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <style type="text/css">
-#T_0b65f th:nth-child(1) {
+#T_1b45f th:nth-child(1) {
   width: 150px;
 }
-#T_0b65f td:nth-child(1) {
+#T_1b45f td:nth-child(1) {
   width: 150px;
 }
-#T_0b65f th:nth-child(2) {
+#T_1b45f th:nth-child(2) {
   width: 350px;
 }
-#T_0b65f td:nth-child(2) {
+#T_1b45f td:nth-child(2) {
   width: 350px;
 }
-#T_0b65f  {
+#T_1b45f  {
   max-height: 500px;
   overflow-y: auto;
   display: block;
 }
-#T_0b65f_row0_col0, #T_0b65f_row0_col1, #T_0b65f_row1_col0, #T_0b65f_row1_col1, #T_0b65f_row2_col0, #T_0b65f_row2_col1, #T_0b65f_row3_col0, #T_0b65f_row3_col1, #T_0b65f_row4_col0, #T_0b65f_row4_col1, #T_0b65f_row5_col0, #T_0b65f_row5_col1, #T_0b65f_row6_col0, #T_0b65f_row6_col1, #T_0b65f_row7_col0, #T_0b65f_row7_col1, #T_0b65f_row8_col0, #T_0b65f_row8_col1, #T_0b65f_row9_col0, #T_0b65f_row9_col1, #T_0b65f_row10_col0, #T_0b65f_row10_col1, #T_0b65f_row11_col0, #T_0b65f_row11_col1, #T_0b65f_row12_col0, #T_0b65f_row12_col1, #T_0b65f_row13_col0, #T_0b65f_row13_col1, #T_0b65f_row14_col0, #T_0b65f_row14_col1, #T_0b65f_row15_col0, #T_0b65f_row15_col1, #T_0b65f_row16_col0, #T_0b65f_row16_col1, #T_0b65f_row17_col0, #T_0b65f_row17_col1, #T_0b65f_row18_col0, #T_0b65f_row18_col1, #T_0b65f_row19_col0, #T_0b65f_row19_col1, #T_0b65f_row20_col0, #T_0b65f_row20_col1, #T_0b65f_row21_col0, #T_0b65f_row21_col1, #T_0b65f_row22_col0, #T_0b65f_row22_col1, #T_0b65f_row23_col0, #T_0b65f_row23_col1, #T_0b65f_row24_col0, #T_0b65f_row24_col1, #T_0b65f_row25_col0, #T_0b65f_row25_col1, #T_0b65f_row26_col0, #T_0b65f_row26_col1, #T_0b65f_row27_col0, #T_0b65f_row27_col1, #T_0b65f_row28_col0, #T_0b65f_row28_col1, #T_0b65f_row29_col0, #T_0b65f_row29_col1, #T_0b65f_row30_col0, #T_0b65f_row30_col1, #T_0b65f_row31_col0, #T_0b65f_row31_col1, #T_0b65f_row32_col0, #T_0b65f_row32_col1, #T_0b65f_row33_col0, #T_0b65f_row33_col1, #T_0b65f_row34_col0, #T_0b65f_row34_col1, #T_0b65f_row35_col0, #T_0b65f_row35_col1, #T_0b65f_row36_col0, #T_0b65f_row36_col1, #T_0b65f_row37_col0, #T_0b65f_row37_col1, #T_0b65f_row38_col0, #T_0b65f_row38_col1, #T_0b65f_row39_col0, #T_0b65f_row39_col1, #T_0b65f_row40_col0, #T_0b65f_row40_col1, #T_0b65f_row41_col0, #T_0b65f_row41_col1, #T_0b65f_row42_col0, #T_0b65f_row42_col1, #T_0b65f_row43_col0, #T_0b65f_row43_col1, #T_0b65f_row44_col0, #T_0b65f_row44_col1, #T_0b65f_row45_col0, #T_0b65f_row45_col1, #T_0b65f_row46_col0, #T_0b65f_row46_col1, #T_0b65f_row47_col0, #T_0b65f_row47_col1, #T_0b65f_row48_col0, #T_0b65f_row48_col1, #T_0b65f_row49_col0, #T_0b65f_row49_col1, #T_0b65f_row50_col0, #T_0b65f_row50_col1, #T_0b65f_row51_col0, #T_0b65f_row51_col1, #T_0b65f_row52_col0, #T_0b65f_row52_col1, #T_0b65f_row53_col0, #T_0b65f_row53_col1, #T_0b65f_row54_col0, #T_0b65f_row54_col1 {
+#T_1b45f_row0_col0, #T_1b45f_row0_col1, #T_1b45f_row1_col0, #T_1b45f_row1_col1, #T_1b45f_row2_col0, #T_1b45f_row2_col1, #T_1b45f_row3_col0, #T_1b45f_row3_col1, #T_1b45f_row4_col0, #T_1b45f_row4_col1, #T_1b45f_row5_col0, #T_1b45f_row5_col1, #T_1b45f_row6_col0, #T_1b45f_row6_col1, #T_1b45f_row7_col0, #T_1b45f_row7_col1, #T_1b45f_row8_col0, #T_1b45f_row8_col1, #T_1b45f_row9_col0, #T_1b45f_row9_col1, #T_1b45f_row10_col0, #T_1b45f_row10_col1, #T_1b45f_row11_col0, #T_1b45f_row11_col1, #T_1b45f_row12_col0, #T_1b45f_row12_col1, #T_1b45f_row13_col0, #T_1b45f_row13_col1, #T_1b45f_row14_col0, #T_1b45f_row14_col1, #T_1b45f_row15_col0, #T_1b45f_row15_col1, #T_1b45f_row16_col0, #T_1b45f_row16_col1, #T_1b45f_row17_col0, #T_1b45f_row17_col1, #T_1b45f_row18_col0, #T_1b45f_row18_col1, #T_1b45f_row19_col0, #T_1b45f_row19_col1, #T_1b45f_row20_col0, #T_1b45f_row20_col1, #T_1b45f_row21_col0, #T_1b45f_row21_col1, #T_1b45f_row22_col0, #T_1b45f_row22_col1, #T_1b45f_row23_col0, #T_1b45f_row23_col1, #T_1b45f_row24_col0, #T_1b45f_row24_col1, #T_1b45f_row25_col0, #T_1b45f_row25_col1, #T_1b45f_row26_col0, #T_1b45f_row26_col1, #T_1b45f_row27_col0, #T_1b45f_row27_col1, #T_1b45f_row28_col0, #T_1b45f_row28_col1, #T_1b45f_row29_col0, #T_1b45f_row29_col1, #T_1b45f_row30_col0, #T_1b45f_row30_col1, #T_1b45f_row31_col0, #T_1b45f_row31_col1, #T_1b45f_row32_col0, #T_1b45f_row32_col1, #T_1b45f_row33_col0, #T_1b45f_row33_col1, #T_1b45f_row34_col0, #T_1b45f_row34_col1, #T_1b45f_row35_col0, #T_1b45f_row35_col1, #T_1b45f_row36_col0, #T_1b45f_row36_col1, #T_1b45f_row37_col0, #T_1b45f_row37_col1, #T_1b45f_row38_col0, #T_1b45f_row38_col1, #T_1b45f_row39_col0, #T_1b45f_row39_col1, #T_1b45f_row40_col0, #T_1b45f_row40_col1, #T_1b45f_row41_col0, #T_1b45f_row41_col1, #T_1b45f_row42_col0, #T_1b45f_row42_col1, #T_1b45f_row43_col0, #T_1b45f_row43_col1, #T_1b45f_row44_col0, #T_1b45f_row44_col1, #T_1b45f_row45_col0, #T_1b45f_row45_col1, #T_1b45f_row46_col0, #T_1b45f_row46_col1, #T_1b45f_row47_col0, #T_1b45f_row47_col1, #T_1b45f_row48_col0, #T_1b45f_row48_col1, #T_1b45f_row49_col0, #T_1b45f_row49_col1, #T_1b45f_row50_col0, #T_1b45f_row50_col1, #T_1b45f_row51_col0, #T_1b45f_row51_col1, #T_1b45f_row52_col0, #T_1b45f_row52_col1, #T_1b45f_row53_col0, #T_1b45f_row53_col1, #T_1b45f_row54_col0, #T_1b45f_row54_col1 {
   text-align: left;
 }
 </style>
 
-<table id="T_0b65f" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<table id="T_1b45f" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_0b65f_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Abbreviation</th>
-<th id="T_0b65f_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Institute</th>
+<th id="T_1b45f_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Abbreviation</th>
+<th id="T_1b45f_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Institute</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_0b65f_row0_col0" class="data row0 col0">LEUV</td>
-<td id="T_0b65f_row0_col1" class="data row0 col1">KU Leuven-University Hospital Leuven</td>
+<td id="T_1b45f_row0_col0" class="data row0 col0">LEUV</td>
+<td id="T_1b45f_row0_col1" class="data row0 col1">KU Leuven-University Hospital Leuven</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row1_col0" class="data row1 col0">MESK</td>
-<td id="T_0b65f_row1_col1" class="data row1 col1">Memorial Sloan Kettering</td>
+<td id="T_1b45f_row1_col0" class="data row1 col0">MESK</td>
+<td id="T_1b45f_row1_col1" class="data row1 col1">Memorial Sloan Kettering</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row2_col0" class="data row2 col0">HAMS</td>
-<td id="T_0b65f_row2_col1" class="data row2 col1">Harvard Medical School</td>
+<td id="T_1b45f_row2_col0" class="data row2 col0">HAMS</td>
+<td id="T_1b45f_row2_col1" class="data row2 col1">Harvard Medical School</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row3_col0" class="data row3 col0">DFCI</td>
-<td id="T_0b65f_row3_col1" class="data row3 col1">Dana-Farber Cancer Institute</td>
+<td id="T_1b45f_row3_col0" class="data row3 col0">DFCI</td>
+<td id="T_1b45f_row3_col1" class="data row3 col1">Dana-Farber Cancer Institute</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row4_col0" class="data row4 col0">MDAN</td>
-<td id="T_0b65f_row4_col1" class="data row4 col1">MD Anderson</td>
+<td id="T_1b45f_row4_col0" class="data row4 col0">MDAN</td>
+<td id="T_1b45f_row4_col1" class="data row4 col1">MD Anderson</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row5_col0" class="data row5 col0">JOHO</td>
-<td id="T_0b65f_row5_col1" class="data row5 col1">Johns Hopkins</td>
+<td id="T_1b45f_row5_col0" class="data row5 col0">JOHO</td>
+<td id="T_1b45f_row5_col1" class="data row5 col1">Johns Hopkins</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row6_col0" class="data row6 col0">GURO</td>
-<td id="T_0b65f_row6_col1" class="data row6 col1">Gustave Roussy</td>
+<td id="T_1b45f_row6_col0" class="data row6 col0">GURO</td>
+<td id="T_1b45f_row6_col1" class="data row6 col1">Gustave Roussy</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row7_col0" class="data row7 col0">KARO</td>
-<td id="T_0b65f_row7_col1" class="data row7 col1">Karolinska</td>
+<td id="T_1b45f_row7_col0" class="data row7 col0">KARO</td>
+<td id="T_1b45f_row7_col1" class="data row7 col1">Karolinska</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row8_col0" class="data row8 col0">YALE</td>
-<td id="T_0b65f_row8_col1" class="data row8 col1">Yale</td>
+<td id="T_1b45f_row8_col0" class="data row8 col0">YALE</td>
+<td id="T_1b45f_row8_col1" class="data row8 col1">Yale</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row9_col0" class="data row9 col0">UCL</td>
-<td id="T_0b65f_row9_col1" class="data row9 col1">UCL (London)</td>
+<td id="T_1b45f_row9_col0" class="data row9 col0">UCL</td>
+<td id="T_1b45f_row9_col1" class="data row9 col1">UCL (London)</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row10_col0" class="data row10 col0">VALL</td>
-<td id="T_0b65f_row10_col1" class="data row10 col1">Vallebron (Barcelona)</td>
+<td id="T_1b45f_row10_col0" class="data row10 col0">VALL</td>
+<td id="T_1b45f_row10_col1" class="data row10 col1">Vallebron (Barcelona)</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row11_col0" class="data row11 col0">MANC</td>
-<td id="T_0b65f_row11_col1" class="data row11 col1">Manchester</td>
+<td id="T_1b45f_row11_col0" class="data row11 col0">MANC</td>
+<td id="T_1b45f_row11_col1" class="data row11 col1">Manchester</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row12_col0" class="data row12 col0">CHAR</td>
-<td id="T_0b65f_row12_col1" class="data row12 col1">Charite</td>
+<td id="T_1b45f_row12_col0" class="data row12 col0">CHAR</td>
+<td id="T_1b45f_row12_col1" class="data row12 col1">Charite</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row13_col0" class="data row13 col0">NKIA</td>
-<td id="T_0b65f_row13_col1" class="data row13 col1">NKI-AVL</td>
+<td id="T_1b45f_row13_col0" class="data row13 col0">NKIA</td>
+<td id="T_1b45f_row13_col1" class="data row13 col1">NKI-AVL</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row14_col0" class="data row14 col0">CCA</td>
-<td id="T_0b65f_row14_col1" class="data row14 col1">CCA</td>
+<td id="T_1b45f_row14_col0" class="data row14 col0">CCA</td>
+<td id="T_1b45f_row14_col1" class="data row14 col1">CCA</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row15_col0" class="data row15 col0">AUMC</td>
-<td id="T_0b65f_row15_col1" class="data row15 col1">AMC-VUMC</td>
+<td id="T_1b45f_row15_col0" class="data row15 col0">AUMC</td>
+<td id="T_1b45f_row15_col1" class="data row15 col1">AMC-VUMC</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row16_col0" class="data row16 col0">ERMC</td>
-<td id="T_0b65f_row16_col1" class="data row16 col1">Erasmus MC</td>
+<td id="T_1b45f_row16_col0" class="data row16 col0">ERMC</td>
+<td id="T_1b45f_row16_col1" class="data row16 col1">Erasmus MC</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row17_col0" class="data row17 col0">LUMC</td>
-<td id="T_0b65f_row17_col1" class="data row17 col1">Leids UMC</td>
+<td id="T_1b45f_row17_col0" class="data row17 col0">LUMC</td>
+<td id="T_1b45f_row17_col1" class="data row17 col1">Leids UMC</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row18_col0" class="data row18 col0">MUMC</td>
-<td id="T_0b65f_row18_col1" class="data row18 col1">Maastricht UMC</td>
+<td id="T_1b45f_row18_col0" class="data row18 col0">MUMC</td>
+<td id="T_1b45f_row18_col1" class="data row18 col1">Maastricht UMC</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row19_col0" class="data row19 col0">UMCG</td>
-<td id="T_0b65f_row19_col1" class="data row19 col1">UMC Groningen</td>
+<td id="T_1b45f_row19_col0" class="data row19 col0">UMCG</td>
+<td id="T_1b45f_row19_col1" class="data row19 col1">UMC Groningen</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row20_col0" class="data row20 col0">RUMC</td>
-<td id="T_0b65f_row20_col1" class="data row20 col1">Radboud UMC</td>
+<td id="T_1b45f_row20_col0" class="data row20 col0">RUMC</td>
+<td id="T_1b45f_row20_col1" class="data row20 col1">Radboud UMC</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row21_col0" class="data row21 col0">UMCU</td>
-<td id="T_0b65f_row21_col1" class="data row21 col1">UMC Utrecht</td>
+<td id="T_1b45f_row21_col0" class="data row21 col0">UMCU</td>
+<td id="T_1b45f_row21_col1" class="data row21 col1">UMC Utrecht</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row22_col0" class="data row22 col0">HUBR</td>
-<td id="T_0b65f_row22_col1" class="data row22 col1">Hubrecht</td>
+<td id="T_1b45f_row22_col0" class="data row22 col0">HUBR</td>
+<td id="T_1b45f_row22_col1" class="data row22 col1">Hubrecht</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row23_col0" class="data row23 col0">AMS</td>
-<td id="T_0b65f_row23_col1" class="data row23 col1">Amsterdam</td>
+<td id="T_1b45f_row23_col0" class="data row23 col0">AMS</td>
+<td id="T_1b45f_row23_col1" class="data row23 col1">Amsterdam</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row24_col0" class="data row24 col0">AMSU</td>
-<td id="T_0b65f_row24_col1" class="data row24 col1">AMS-UMCU</td>
+<td id="T_1b45f_row24_col0" class="data row24 col0">AMSU</td>
+<td id="T_1b45f_row24_col1" class="data row24 col1">AMS-UMCU</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row25_col0" class="data row25 col0">BOST</td>
-<td id="T_0b65f_row25_col1" class="data row25 col1">Harvard Medical School</td>
+<td id="T_1b45f_row25_col0" class="data row25 col0">BOST</td>
+<td id="T_1b45f_row25_col1" class="data row25 col1">Harvard Medical School</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row26_col0" class="data row26 col0">TOSK</td>
-<td id="T_0b65f_row26_col1" class="data row26 col1">University of Toronto</td>
+<td id="T_1b45f_row26_col0" class="data row26 col0">TOSK</td>
+<td id="T_1b45f_row26_col1" class="data row26 col1">University of Toronto</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row27_col0" class="data row27 col0">GOSH</td>
-<td id="T_0b65f_row27_col1" class="data row27 col1">UCL (London)</td>
+<td id="T_1b45f_row27_col0" class="data row27 col0">GOSH</td>
+<td id="T_1b45f_row27_col1" class="data row27 col1">UCL (London)</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row28_col0" class="data row28 col0">CICH</td>
-<td id="T_0b65f_row28_col1" class="data row28 col1">Cincinatti</td>
+<td id="T_1b45f_row28_col0" class="data row28 col0">CICH</td>
+<td id="T_1b45f_row28_col1" class="data row28 col1">Cincinatti</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row29_col0" class="data row29 col0">MAYO</td>
-<td id="T_0b65f_row29_col1" class="data row29 col1">Mayo Clinic</td>
+<td id="T_1b45f_row29_col0" class="data row29 col0">MAYO</td>
+<td id="T_1b45f_row29_col1" class="data row29 col1">Mayo Clinic</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row30_col0" class="data row30 col0">VUB</td>
-<td id="T_0b65f_row30_col1" class="data row30 col1">Vrije Universiteit Brussel</td>
+<td id="T_1b45f_row30_col0" class="data row30 col0">VUB</td>
+<td id="T_1b45f_row30_col1" class="data row30 col1">Vrije Universiteit Brussel</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row31_col0" class="data row31 col0">SKMC</td>
-<td id="T_0b65f_row31_col1" class="data row31 col1">Thomas Jefferson University</td>
+<td id="T_1b45f_row31_col0" class="data row31 col0">SKMC</td>
+<td id="T_1b45f_row31_col1" class="data row31 col1">Thomas Jefferson University</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row32_col0" class="data row32 col0">SJDB</td>
-<td id="T_0b65f_row32_col1" class="data row32 col1">Hospital Sant Joan de Deu Barcelona</td>
+<td id="T_1b45f_row32_col0" class="data row32 col0">SJDB</td>
+<td id="T_1b45f_row32_col1" class="data row32 col1">Hospital Sant Joan de Deu Barcelona</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row33_col0" class="data row33 col0">SGUH</td>
-<td id="T_0b65f_row33_col1" class="data row33 col1">St George's, University of London</td>
+<td id="T_1b45f_row33_col0" class="data row33 col0">SGUH</td>
+<td id="T_1b45f_row33_col1" class="data row33 col1">St George's, University of London</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row34_col0" class="data row34 col0">RBWH</td>
-<td id="T_0b65f_row34_col1" class="data row34 col1">The University of Queensland</td>
+<td id="T_1b45f_row34_col0" class="data row34 col0">RBWH</td>
+<td id="T_1b45f_row34_col1" class="data row34 col1">The University of Queensland</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row35_col0" class="data row35 col0">PEN</td>
-<td id="T_0b65f_row35_col1" class="data row35 col1">University of Pennsylvania</td>
+<td id="T_1b45f_row35_col0" class="data row35 col0">PEN</td>
+<td id="T_1b45f_row35_col1" class="data row35 col1">University of Pennsylvania</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row36_col0" class="data row36 col0">OSLO</td>
-<td id="T_0b65f_row36_col1" class="data row36 col1">Universitetet i Oslo</td>
+<td id="T_1b45f_row36_col0" class="data row36 col0">OSLO</td>
+<td id="T_1b45f_row36_col1" class="data row36 col1">Universitetet i Oslo</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row37_col0" class="data row37 col0">MON</td>
-<td id="T_0b65f_row37_col1" class="data row37 col1">Monash Medical Centre</td>
+<td id="T_1b45f_row37_col0" class="data row37 col0">MON</td>
+<td id="T_1b45f_row37_col1" class="data row37 col1">Monash Medical Centre</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row38_col0" class="data row38 col0">MIL</td>
-<td id="T_0b65f_row38_col1" class="data row38 col1">Universita Studi di Milano</td>
+<td id="T_1b45f_row38_col0" class="data row38 col0">MIL</td>
+<td id="T_1b45f_row38_col1" class="data row38 col1">Universita Studi di Milano</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row39_col0" class="data row39 col0">MICH</td>
-<td id="T_0b65f_row39_col1" class="data row39 col1">University of Michigan, Ann Arbor</td>
+<td id="T_1b45f_row39_col0" class="data row39 col0">MICH</td>
+<td id="T_1b45f_row39_col1" class="data row39 col1">University of Michigan, Ann Arbor</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row40_col0" class="data row40 col0">KING</td>
-<td id="T_0b65f_row40_col1" class="data row40 col1">King's College London</td>
+<td id="T_1b45f_row40_col0" class="data row40 col0">KING</td>
+<td id="T_1b45f_row40_col1" class="data row40 col1">King's College London</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row41_col0" class="data row41 col0">HARV</td>
-<td id="T_0b65f_row41_col1" class="data row41 col1">Harvard Medical School</td>
+<td id="T_1b45f_row41_col0" class="data row41 col0">HARV</td>
+<td id="T_1b45f_row41_col1" class="data row41 col1">Harvard Medical School</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row42_col0" class="data row42 col0">GENT</td>
-<td id="T_0b65f_row42_col1" class="data row42 col1">Universiteit Gent</td>
+<td id="T_1b45f_row42_col0" class="data row42 col0">GENT</td>
+<td id="T_1b45f_row42_col1" class="data row42 col1">Universiteit Gent</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row43_col0" class="data row43 col0">EUN</td>
-<td id="T_0b65f_row43_col1" class="data row43 col1">University of Massachusetts System</td>
+<td id="T_1b45f_row43_col0" class="data row43 col0">EUN</td>
+<td id="T_1b45f_row43_col1" class="data row43 col1">University of Massachusetts System</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row44_col0" class="data row44 col0">EDIN</td>
-<td id="T_0b65f_row44_col1" class="data row44 col1">Edinburgh Medical School</td>
+<td id="T_1b45f_row44_col0" class="data row44 col0">EDIN</td>
+<td id="T_1b45f_row44_col1" class="data row44 col1">Edinburgh Medical School</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row45_col0" class="data row45 col0">DUKE</td>
-<td id="T_0b65f_row45_col1" class="data row45 col1">Duke University</td>
+<td id="T_1b45f_row45_col0" class="data row45 col0">DUKE</td>
+<td id="T_1b45f_row45_col1" class="data row45 col1">Duke University</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row46_col0" class="data row46 col0">DEX</td>
-<td id="T_0b65f_row46_col1" class="data row46 col1">Hospital Universitari Dexeus</td>
+<td id="T_1b45f_row46_col0" class="data row46 col0">DEX</td>
+<td id="T_1b45f_row46_col1" class="data row46 col1">Hospital Universitari Dexeus</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row47_col0" class="data row47 col0">COP</td>
-<td id="T_0b65f_row47_col1" class="data row47 col1">Copenhagen University Hospital</td>
+<td id="T_1b45f_row47_col0" class="data row47 col0">COP</td>
+<td id="T_1b45f_row47_col1" class="data row47 col1">Copenhagen University Hospital</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row48_col0" class="data row48 col0">BIRM</td>
-<td id="T_0b65f_row48_col1" class="data row48 col1">University of Birmingham</td>
+<td id="T_1b45f_row48_col0" class="data row48 col0">BIRM</td>
+<td id="T_1b45f_row48_col1" class="data row48 col1">University of Birmingham</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row49_col0" class="data row49 col0">BARC</td>
-<td id="T_0b65f_row49_col1" class="data row49 col1">Universitat de Barcelona</td>
+<td id="T_1b45f_row49_col0" class="data row49 col0">BARC</td>
+<td id="T_1b45f_row49_col1" class="data row49 col1">Universitat de Barcelona</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row50_col0" class="data row50 col0">AUCK</td>
-<td id="T_0b65f_row50_col1" class="data row50 col1">The University of Auckland</td>
+<td id="T_1b45f_row50_col0" class="data row50 col0">AUCK</td>
+<td id="T_1b45f_row50_col1" class="data row50 col1">The University of Auckland</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row51_col0" class="data row51 col0">ADEL</td>
-<td id="T_0b65f_row51_col1" class="data row51 col1">The University of Adelaide</td>
+<td id="T_1b45f_row51_col0" class="data row51 col0">ADEL</td>
+<td id="T_1b45f_row51_col1" class="data row51 col1">The University of Adelaide</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row52_col0" class="data row52 col0">ABER</td>
-<td id="T_0b65f_row52_col1" class="data row52 col1">University of Aberdeen</td>
+<td id="T_1b45f_row52_col0" class="data row52 col0">ABER</td>
+<td id="T_1b45f_row52_col1" class="data row52 col1">University of Aberdeen</td>
 </tr>
 <tr class="even">
-<td id="T_0b65f_row53_col0" class="data row53 col0">MELB</td>
-<td id="T_0b65f_row53_col1" class="data row53 col1">University of Melbourne</td>
+<td id="T_1b45f_row53_col0" class="data row53 col0">MELB</td>
+<td id="T_1b45f_row53_col1" class="data row53 col1">University of Melbourne</td>
 </tr>
 <tr class="odd">
-<td id="T_0b65f_row54_col0" class="data row54 col0">NW</td>
-<td id="T_0b65f_row54_col1" class="data row54 col1">Northwestern University</td>
+<td id="T_1b45f_row54_col0" class="data row54 col0">NW</td>
+<td id="T_1b45f_row54_col1" class="data row54 col1">Northwestern University</td>
 </tr>
 </tbody>
 </table>
@@ -1581,250 +1581,250 @@ Show query
 <section id="keywords" class="level2">
 <h2 class="anchored" data-anchor-id="keywords">Keywords</h2>
 <p>Scroll down for more keywords.</p>
-<div id="21de2692" class="cell" data-execution_count="4">
+<div id="6d390104" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <style type="text/css">
-#T_d26a9 th:nth-child(1) {
+#T_d45fe th:nth-child(1) {
   width: 150px;
 }
-#T_d26a9 td:nth-child(1) {
+#T_d45fe td:nth-child(1) {
   width: 150px;
 }
-#T_d26a9 th:nth-child(2) {
+#T_d45fe th:nth-child(2) {
   width: 350px;
 }
-#T_d26a9 td:nth-child(2) {
+#T_d45fe td:nth-child(2) {
   width: 350px;
 }
-#T_d26a9  {
+#T_d45fe  {
   max-height: 500px;
   overflow-y: auto;
   display: block;
 }
-#T_d26a9_row0_col0, #T_d26a9_row0_col1, #T_d26a9_row1_col0, #T_d26a9_row1_col1, #T_d26a9_row2_col0, #T_d26a9_row2_col1, #T_d26a9_row3_col0, #T_d26a9_row3_col1, #T_d26a9_row4_col0, #T_d26a9_row4_col1, #T_d26a9_row5_col0, #T_d26a9_row5_col1, #T_d26a9_row6_col0, #T_d26a9_row6_col1, #T_d26a9_row7_col0, #T_d26a9_row7_col1, #T_d26a9_row8_col0, #T_d26a9_row8_col1, #T_d26a9_row9_col0, #T_d26a9_row9_col1, #T_d26a9_row10_col0, #T_d26a9_row10_col1, #T_d26a9_row11_col0, #T_d26a9_row11_col1, #T_d26a9_row12_col0, #T_d26a9_row12_col1, #T_d26a9_row13_col0, #T_d26a9_row13_col1, #T_d26a9_row14_col0, #T_d26a9_row14_col1, #T_d26a9_row15_col0, #T_d26a9_row15_col1, #T_d26a9_row16_col0, #T_d26a9_row16_col1, #T_d26a9_row17_col0, #T_d26a9_row17_col1, #T_d26a9_row18_col0, #T_d26a9_row18_col1, #T_d26a9_row19_col0, #T_d26a9_row19_col1, #T_d26a9_row20_col0, #T_d26a9_row20_col1, #T_d26a9_row21_col0, #T_d26a9_row21_col1, #T_d26a9_row22_col0, #T_d26a9_row22_col1, #T_d26a9_row23_col0, #T_d26a9_row23_col1, #T_d26a9_row24_col0, #T_d26a9_row24_col1, #T_d26a9_row25_col0, #T_d26a9_row25_col1, #T_d26a9_row26_col0, #T_d26a9_row26_col1, #T_d26a9_row27_col0, #T_d26a9_row27_col1, #T_d26a9_row28_col0, #T_d26a9_row28_col1, #T_d26a9_row29_col0, #T_d26a9_row29_col1, #T_d26a9_row30_col0, #T_d26a9_row30_col1, #T_d26a9_row31_col0, #T_d26a9_row31_col1, #T_d26a9_row32_col0, #T_d26a9_row32_col1, #T_d26a9_row33_col0, #T_d26a9_row33_col1, #T_d26a9_row34_col0, #T_d26a9_row34_col1, #T_d26a9_row35_col0, #T_d26a9_row35_col1, #T_d26a9_row36_col0, #T_d26a9_row36_col1, #T_d26a9_row37_col0, #T_d26a9_row37_col1, #T_d26a9_row38_col0, #T_d26a9_row38_col1, #T_d26a9_row39_col0, #T_d26a9_row39_col1, #T_d26a9_row40_col0, #T_d26a9_row40_col1, #T_d26a9_row41_col0, #T_d26a9_row41_col1, #T_d26a9_row42_col0, #T_d26a9_row42_col1, #T_d26a9_row43_col0, #T_d26a9_row43_col1, #T_d26a9_row44_col0, #T_d26a9_row44_col1, #T_d26a9_row45_col0, #T_d26a9_row45_col1, #T_d26a9_row46_col0, #T_d26a9_row46_col1, #T_d26a9_row47_col0, #T_d26a9_row47_col1, #T_d26a9_row48_col0, #T_d26a9_row48_col1, #T_d26a9_row49_col0, #T_d26a9_row49_col1, #T_d26a9_row50_col0, #T_d26a9_row50_col1, #T_d26a9_row51_col0, #T_d26a9_row51_col1, #T_d26a9_row52_col0, #T_d26a9_row52_col1 {
+#T_d45fe_row0_col0, #T_d45fe_row0_col1, #T_d45fe_row1_col0, #T_d45fe_row1_col1, #T_d45fe_row2_col0, #T_d45fe_row2_col1, #T_d45fe_row3_col0, #T_d45fe_row3_col1, #T_d45fe_row4_col0, #T_d45fe_row4_col1, #T_d45fe_row5_col0, #T_d45fe_row5_col1, #T_d45fe_row6_col0, #T_d45fe_row6_col1, #T_d45fe_row7_col0, #T_d45fe_row7_col1, #T_d45fe_row8_col0, #T_d45fe_row8_col1, #T_d45fe_row9_col0, #T_d45fe_row9_col1, #T_d45fe_row10_col0, #T_d45fe_row10_col1, #T_d45fe_row11_col0, #T_d45fe_row11_col1, #T_d45fe_row12_col0, #T_d45fe_row12_col1, #T_d45fe_row13_col0, #T_d45fe_row13_col1, #T_d45fe_row14_col0, #T_d45fe_row14_col1, #T_d45fe_row15_col0, #T_d45fe_row15_col1, #T_d45fe_row16_col0, #T_d45fe_row16_col1, #T_d45fe_row17_col0, #T_d45fe_row17_col1, #T_d45fe_row18_col0, #T_d45fe_row18_col1, #T_d45fe_row19_col0, #T_d45fe_row19_col1, #T_d45fe_row20_col0, #T_d45fe_row20_col1, #T_d45fe_row21_col0, #T_d45fe_row21_col1, #T_d45fe_row22_col0, #T_d45fe_row22_col1, #T_d45fe_row23_col0, #T_d45fe_row23_col1, #T_d45fe_row24_col0, #T_d45fe_row24_col1, #T_d45fe_row25_col0, #T_d45fe_row25_col1, #T_d45fe_row26_col0, #T_d45fe_row26_col1, #T_d45fe_row27_col0, #T_d45fe_row27_col1, #T_d45fe_row28_col0, #T_d45fe_row28_col1, #T_d45fe_row29_col0, #T_d45fe_row29_col1, #T_d45fe_row30_col0, #T_d45fe_row30_col1, #T_d45fe_row31_col0, #T_d45fe_row31_col1, #T_d45fe_row32_col0, #T_d45fe_row32_col1, #T_d45fe_row33_col0, #T_d45fe_row33_col1, #T_d45fe_row34_col0, #T_d45fe_row34_col1, #T_d45fe_row35_col0, #T_d45fe_row35_col1, #T_d45fe_row36_col0, #T_d45fe_row36_col1, #T_d45fe_row37_col0, #T_d45fe_row37_col1, #T_d45fe_row38_col0, #T_d45fe_row38_col1, #T_d45fe_row39_col0, #T_d45fe_row39_col1, #T_d45fe_row40_col0, #T_d45fe_row40_col1, #T_d45fe_row41_col0, #T_d45fe_row41_col1, #T_d45fe_row42_col0, #T_d45fe_row42_col1, #T_d45fe_row43_col0, #T_d45fe_row43_col1, #T_d45fe_row44_col0, #T_d45fe_row44_col1, #T_d45fe_row45_col0, #T_d45fe_row45_col1, #T_d45fe_row46_col0, #T_d45fe_row46_col1, #T_d45fe_row47_col0, #T_d45fe_row47_col1, #T_d45fe_row48_col0, #T_d45fe_row48_col1, #T_d45fe_row49_col0, #T_d45fe_row49_col1, #T_d45fe_row50_col0, #T_d45fe_row50_col1, #T_d45fe_row51_col0, #T_d45fe_row51_col1, #T_d45fe_row52_col0, #T_d45fe_row52_col1 {
   text-align: left;
 }
 </style>
 
-<table id="T_d26a9" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<table id="T_d45fe" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_d26a9_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Abbreviation</th>
-<th id="T_d26a9_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Keyword</th>
+<th id="T_d45fe_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Abbreviation</th>
+<th id="T_d45fe_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Keyword</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_d26a9_row0_col0" class="data row0 col0">ADEM</td>
-<td id="T_d26a9_row0_col1" class="data row0 col1">UTERINE ADENOMYOSIS</td>
+<td id="T_d45fe_row0_col0" class="data row0 col0">ADEM</td>
+<td id="T_d45fe_row0_col1" class="data row0 col1">UTERINE ADENOMYOSIS</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row1_col0" class="data row1 col0">ADH</td>
-<td id="T_d26a9_row1_col1" class="data row1 col1">INTRAUTERINE ADHESIONS</td>
+<td id="T_d45fe_row1_col0" class="data row1 col0">ADH</td>
+<td id="T_d45fe_row1_col1" class="data row1 col1">INTRAUTERINE ADHESIONS</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row2_col0" class="data row2 col0">APLA</td>
-<td id="T_d26a9_row2_col1" class="data row2 col1">ABORTUS PROVOCATUS</td>
+<td id="T_d45fe_row2_col0" class="data row2 col0">APLA</td>
+<td id="T_d45fe_row2_col1" class="data row2 col1">ABORTUS PROVOCATUS</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row3_col0" class="data row3 col0">ART</td>
-<td id="T_d26a9_row3_col1" class="data row3 col1">ASSISTED REPRODUCTIVE TECHNOLOGY</td>
+<td id="T_d45fe_row3_col0" class="data row3 col0">ART</td>
+<td id="T_d45fe_row3_col1" class="data row3 col1">ASSISTED REPRODUCTIVE TECHNOLOGY</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row4_col0" class="data row4 col0">BLD</td>
-<td id="T_d26a9_row4_col1" class="data row4 col1">UTERINE BLEEDING</td>
+<td id="T_d45fe_row4_col0" class="data row4 col0">BLD</td>
+<td id="T_d45fe_row4_col1" class="data row4 col1">UTERINE BLEEDING</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row5_col0" class="data row5 col0">BRCH</td>
-<td id="T_d26a9_row5_col1" class="data row5 col1">BREECH</td>
+<td id="T_d45fe_row5_col0" class="data row5 col0">BRCH</td>
+<td id="T_d45fe_row5_col1" class="data row5 col1">BREECH</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row6_col0" class="data row6 col0">BRTH</td>
-<td id="T_d26a9_row6_col1" class="data row6 col1">BIRTH</td>
+<td id="T_d45fe_row6_col0" class="data row6 col0">BRTH</td>
+<td id="T_d45fe_row6_col1" class="data row6 col1">BIRTH</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row7_col0" class="data row7 col0">CERCL</td>
-<td id="T_d26a9_row7_col1" class="data row7 col1">UTERINE CERCLAGE</td>
+<td id="T_d45fe_row7_col0" class="data row7 col0">CERCL</td>
+<td id="T_d45fe_row7_col1" class="data row7 col1">UTERINE CERCLAGE</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row8_col0" class="data row8 col0">CIP</td>
-<td id="T_d26a9_row8_col1" class="data row8 col1">CANCER</td>
+<td id="T_d45fe_row8_col0" class="data row8 col0">CIP</td>
+<td id="T_d45fe_row8_col1" class="data row8 col1">CANCER</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row9_col0" class="data row9 col0">DIAB</td>
-<td id="T_d26a9_row9_col1" class="data row9 col1">DIABETES</td>
+<td id="T_d45fe_row9_col0" class="data row9 col0">DIAB</td>
+<td id="T_d45fe_row9_col1" class="data row9 col1">DIABETES</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row10_col0" class="data row10 col0">ECT</td>
-<td id="T_d26a9_row10_col1" class="data row10 col1">ECTOPIC PREGNANCY</td>
+<td id="T_d45fe_row10_col0" class="data row10 col0">ECT</td>
+<td id="T_d45fe_row10_col1" class="data row10 col1">ECTOPIC PREGNANCY</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row11_col0" class="data row11 col0">ENDM</td>
-<td id="T_d26a9_row11_col1" class="data row11 col1">ENDOMETRIOSIS</td>
+<td id="T_d45fe_row11_col0" class="data row11 col0">ENDM</td>
+<td id="T_d45fe_row11_col1" class="data row11 col1">ENDOMETRIOSIS</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row12_col0" class="data row12 col0">FERT</td>
-<td id="T_d26a9_row12_col1" class="data row12 col1">GENERAL (IN)FERTILITY</td>
+<td id="T_d45fe_row12_col0" class="data row12 col0">FERT</td>
+<td id="T_d45fe_row12_col1" class="data row12 col1">GENERAL (IN)FERTILITY</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row13_col0" class="data row13 col0">FGR</td>
-<td id="T_d26a9_row13_col1" class="data row13 col1">FETAL GROWTH RETARDATION</td>
+<td id="T_d45fe_row13_col0" class="data row13 col0">FGR</td>
+<td id="T_d45fe_row13_col1" class="data row13 col1">FETAL GROWTH RETARDATION</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row14_col0" class="data row14 col0">FIBR</td>
-<td id="T_d26a9_row14_col1" class="data row14 col1">UTERINE FIBROIDS</td>
+<td id="T_d45fe_row14_col0" class="data row14 col0">FIBR</td>
+<td id="T_d45fe_row14_col1" class="data row14 col1">UTERINE FIBROIDS</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row15_col0" class="data row15 col0">FSH</td>
-<td id="T_d26a9_row15_col1" class="data row15 col1">FOLLICLE STIMULATING HORMONE</td>
+<td id="T_d45fe_row15_col0" class="data row15 col0">FSH</td>
+<td id="T_d45fe_row15_col1" class="data row15 col1">FOLLICLE STIMULATING HORMONE</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row16_col0" class="data row16 col0">GEND</td>
-<td id="T_d26a9_row16_col1" class="data row16 col1">GENDER</td>
+<td id="T_d45fe_row16_col0" class="data row16 col0">GEND</td>
+<td id="T_d45fe_row16_col1" class="data row16 col1">GENDER</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row17_col0" class="data row17 col0">HG</td>
-<td id="T_d26a9_row17_col1" class="data row17 col1">HYPEREMESIS</td>
+<td id="T_d45fe_row17_col0" class="data row17 col0">HG</td>
+<td id="T_d45fe_row17_col1" class="data row17 col1">HYPEREMESIS</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row18_col0" class="data row18 col0">HSG</td>
-<td id="T_d26a9_row18_col1" class="data row18 col1">HYSTEROSALPINGOGRAPHY</td>
+<td id="T_d45fe_row18_col0" class="data row18 col0">HSG</td>
+<td id="T_d45fe_row18_col1" class="data row18 col1">HYSTEROSALPINGOGRAPHY</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row19_col0" class="data row19 col0">HUM</td>
-<td id="T_d26a9_row19_col1" class="data row19 col1">Human filter</td>
+<td id="T_d45fe_row19_col0" class="data row19 col0">HUM</td>
+<td id="T_d45fe_row19_col1" class="data row19 col1">Human filter</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row20_col0" class="data row20 col0">HYD</td>
-<td id="T_d26a9_row20_col1" class="data row20 col1">HYDROSALPINX</td>
+<td id="T_d45fe_row20_col0" class="data row20 col0">HYD</td>
+<td id="T_d45fe_row20_col1" class="data row20 col1">HYDROSALPINX</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row21_col0" class="data row21 col0">HYP</td>
-<td id="T_d26a9_row21_col1" class="data row21 col1">HYPERTENSIVE DISORDERS</td>
+<td id="T_d45fe_row21_col0" class="data row21 col0">HYP</td>
+<td id="T_d45fe_row21_col1" class="data row21 col1">HYPERTENSIVE DISORDERS</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row22_col0" class="data row22 col0">HYST</td>
-<td id="T_d26a9_row22_col1" class="data row22 col1">HYSTERECTOMY</td>
+<td id="T_d45fe_row22_col0" class="data row22 col0">HYST</td>
+<td id="T_d45fe_row22_col1" class="data row22 col1">HYSTERECTOMY</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row23_col0" class="data row23 col0">INCO</td>
-<td id="T_d26a9_row23_col1" class="data row23 col1">FEMALE URINARY INCONTINENCE</td>
+<td id="T_d45fe_row23_col0" class="data row23 col0">INCO</td>
+<td id="T_d45fe_row23_col1" class="data row23 col1">FEMALE URINARY INCONTINENCE</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row24_col0" class="data row24 col0">LBW</td>
-<td id="T_d26a9_row24_col1" class="data row24 col1">LOW BIRTHWEIGHT</td>
+<td id="T_d45fe_row24_col0" class="data row24 col0">LBW</td>
+<td id="T_d45fe_row24_col1" class="data row24 col1">LOW BIRTHWEIGHT</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row25_col0" class="data row25 col0">LIV</td>
-<td id="T_d26a9_row25_col1" class="data row25 col1">LIVER</td>
+<td id="T_d45fe_row25_col0" class="data row25 col0">LIV</td>
+<td id="T_d45fe_row25_col1" class="data row25 col1">LIVER</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row26_col0" class="data row26 col0">M-INF</td>
-<td id="T_d26a9_row26_col1" class="data row26 col1">MATERNAL INFECTION</td>
+<td id="T_d45fe_row26_col0" class="data row26 col0">M-INF</td>
+<td id="T_d45fe_row26_col1" class="data row26 col1">MATERNAL INFECTION</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row27_col0" class="data row27 col0">MD</td>
-<td id="T_d26a9_row27_col1" class="data row27 col1">MATERNAL DEATH</td>
+<td id="T_d45fe_row27_col0" class="data row27 col0">MD</td>
+<td id="T_d45fe_row27_col1" class="data row27 col1">MATERNAL DEATH</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row28_col0" class="data row28 col0">MLK</td>
-<td id="T_d26a9_row28_col1" class="data row28 col1">BREASTMILK</td>
+<td id="T_d45fe_row28_col0" class="data row28 col0">MLK</td>
+<td id="T_d45fe_row28_col1" class="data row28 col1">BREASTMILK</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row29_col0" class="data row29 col0">MP</td>
-<td id="T_d26a9_row29_col1" class="data row29 col1">MENOPAUSE</td>
+<td id="T_d45fe_row29_col0" class="data row29 col0">MP</td>
+<td id="T_d45fe_row29_col1" class="data row29 col1">MENOPAUSE</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row30_col0" class="data row30 col0">MUSA</td>
-<td id="T_d26a9_row30_col1" class="data row30 col1">MORPHOLOGICAL UTERUS SONOGRAPHIC ASSESSMENT</td>
+<td id="T_d45fe_row30_col0" class="data row30 col0">MUSA</td>
+<td id="T_d45fe_row30_col1" class="data row30 col1">MORPHOLOGICAL UTERUS SONOGRAPHIC ASSESSMENT</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row31_col0" class="data row31 col0">MYOM</td>
-<td id="T_d26a9_row31_col1" class="data row31 col1">MYOMECTOMY</td>
+<td id="T_d45fe_row31_col0" class="data row31 col0">MYOM</td>
+<td id="T_d45fe_row31_col1" class="data row31 col1">MYOMECTOMY</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row32_col0" class="data row32 col0">NB-CHD</td>
-<td id="T_d26a9_row32_col1" class="data row32 col1">CONGENITAL HEART DISEASE</td>
+<td id="T_d45fe_row32_col0" class="data row32 col0">NB-CHD</td>
+<td id="T_d45fe_row32_col1" class="data row32 col1">CONGENITAL HEART DISEASE</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row33_col0" class="data row33 col0">NICH</td>
-<td id="T_d26a9_row33_col1" class="data row33 col1">UTERINE NICHE</td>
+<td id="T_d45fe_row33_col0" class="data row33 col0">NICH</td>
+<td id="T_d45fe_row33_col1" class="data row33 col1">UTERINE NICHE</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row34_col0" class="data row34 col0">OBS-FIS</td>
-<td id="T_d26a9_row34_col1" class="data row34 col1">OBSTETRIC FISTULA</td>
+<td id="T_d45fe_row34_col0" class="data row34 col0">OBS-FIS</td>
+<td id="T_d45fe_row34_col1" class="data row34 col1">OBSTETRIC FISTULA</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row35_col0" class="data row35 col0">ONCO-CER</td>
-<td id="T_d26a9_row35_col1" class="data row35 col1">Gynaecological cancers - Cervix</td>
+<td id="T_d45fe_row35_col0" class="data row35 col0">ONCO-CER</td>
+<td id="T_d45fe_row35_col1" class="data row35 col1">Gynaecological cancers - Cervix</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row36_col0" class="data row36 col0">ONCO-END</td>
-<td id="T_d26a9_row36_col1" class="data row36 col1">Gynaecological cancers - Endometrium</td>
+<td id="T_d45fe_row36_col0" class="data row36 col0">ONCO-END</td>
+<td id="T_d45fe_row36_col1" class="data row36 col1">Gynaecological cancers - Endometrium</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row37_col0" class="data row37 col0">ONCO-GEN</td>
-<td id="T_d26a9_row37_col1" class="data row37 col1">Gynaecological cancers - General terms</td>
+<td id="T_d45fe_row37_col0" class="data row37 col0">ONCO-GEN</td>
+<td id="T_d45fe_row37_col1" class="data row37 col1">Gynaecological cancers - General terms</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row38_col0" class="data row38 col0">ONCO-OVA</td>
-<td id="T_d26a9_row38_col1" class="data row38 col1">Gynaecological cancers - Ovaries</td>
+<td id="T_d45fe_row38_col0" class="data row38 col0">ONCO-OVA</td>
+<td id="T_d45fe_row38_col1" class="data row38 col1">Gynaecological cancers - Ovaries</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row39_col0" class="data row39 col0">ONCO-VUL</td>
-<td id="T_d26a9_row39_col1" class="data row39 col1">Gynaecological cancers - Vulva</td>
+<td id="T_d45fe_row39_col0" class="data row39 col0">ONCO-VUL</td>
+<td id="T_d45fe_row39_col1" class="data row39 col1">Gynaecological cancers - Vulva</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row40_col0" class="data row40 col0">PCOS</td>
-<td id="T_d26a9_row40_col1" class="data row40 col1">POLYCYSTIC OVARIAN SYNDROME</td>
+<td id="T_d45fe_row40_col0" class="data row40 col0">PCOS</td>
+<td id="T_d45fe_row40_col1" class="data row40 col1">POLYCYSTIC OVARIAN SYNDROME</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row41_col0" class="data row41 col0">PL</td>
-<td id="T_d26a9_row41_col1" class="data row41 col1">PREGNANCY LOSS</td>
+<td id="T_d45fe_row41_col0" class="data row41 col0">PL</td>
+<td id="T_d45fe_row41_col1" class="data row41 col1">PREGNANCY LOSS</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row42_col0" class="data row42 col0">PLAC</td>
-<td id="T_d26a9_row42_col1" class="data row42 col1">GENERAL PLACENTA DISORDERS</td>
+<td id="T_d45fe_row42_col0" class="data row42 col0">PLAC</td>
+<td id="T_d45fe_row42_col1" class="data row42 col1">GENERAL PLACENTA DISORDERS</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row43_col0" class="data row43 col0">PND</td>
-<td id="T_d26a9_row43_col1" class="data row43 col1">PRENATAL DIAGNOSTICS</td>
+<td id="T_d45fe_row43_col0" class="data row43 col0">PND</td>
+<td id="T_d45fe_row43_col1" class="data row43 col1">PRENATAL DIAGNOSTICS</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row44_col0" class="data row44 col0">PP-HEM</td>
-<td id="T_d26a9_row44_col1" class="data row44 col1">POSTPARTUM HEMORRHAGE</td>
+<td id="T_d45fe_row44_col0" class="data row44 col0">PP-HEM</td>
+<td id="T_d45fe_row44_col1" class="data row44 col1">POSTPARTUM HEMORRHAGE</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row45_col0" class="data row45 col0">PR-MUL</td>
-<td id="T_d26a9_row45_col1" class="data row45 col1">MULTIFETAL PREGNANCY</td>
+<td id="T_d45fe_row45_col0" class="data row45 col0">PR-MUL</td>
+<td id="T_d45fe_row45_col1" class="data row45 col1">MULTIFETAL PREGNANCY</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row46_col0" class="data row46 col0">PROL</td>
-<td id="T_d26a9_row46_col1" class="data row46 col1">FEMALE PELVIC ORGAN PROLAPSE</td>
+<td id="T_d45fe_row46_col0" class="data row46 col0">PROL</td>
+<td id="T_d45fe_row46_col1" class="data row46 col1">FEMALE PELVIC ORGAN PROLAPSE</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row47_col0" class="data row47 col0">PTB</td>
-<td id="T_d26a9_row47_col1" class="data row47 col1">PRETERM BIRTH</td>
+<td id="T_d45fe_row47_col0" class="data row47 col0">PTB</td>
+<td id="T_d45fe_row47_col1" class="data row47 col1">PRETERM BIRTH</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row48_col0" class="data row48 col0">Pl-INF</td>
-<td id="T_d26a9_row48_col1" class="data row48 col1">CHORIOAMNIONITIS</td>
+<td id="T_d45fe_row48_col0" class="data row48 col0">Pl-INF</td>
+<td id="T_d45fe_row48_col1" class="data row48 col1">CHORIOAMNIONITIS</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row49_col0" class="data row49 col0">PtLB</td>
-<td id="T_d26a9_row49_col1" class="data row49 col1">PRETERM LABOUR</td>
+<td id="T_d45fe_row49_col0" class="data row49 col0">PtLB</td>
+<td id="T_d45fe_row49_col1" class="data row49 col1">PRETERM LABOUR</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row50_col0" class="data row50 col0">SB</td>
-<td id="T_d26a9_row50_col1" class="data row50 col1">STILLBIRTH</td>
+<td id="T_d45fe_row50_col0" class="data row50 col0">SB</td>
+<td id="T_d45fe_row50_col1" class="data row50 col1">STILLBIRTH</td>
 </tr>
 <tr class="even">
-<td id="T_d26a9_row51_col0" class="data row51 col0">SEPT</td>
-<td id="T_d26a9_row51_col1" class="data row51 col1">SEPTATE UTERUS</td>
+<td id="T_d45fe_row51_col0" class="data row51 col0">SEPT</td>
+<td id="T_d45fe_row51_col1" class="data row51 col1">SEPTATE UTERUS</td>
 </tr>
 <tr class="odd">
-<td id="T_d26a9_row52_col0" class="data row52 col0">ULIP</td>
-<td id="T_d26a9_row52_col1" class="data row52 col1">ULIPRISTAL</td>
+<td id="T_d45fe_row52_col0" class="data row52 col0">ULIP</td>
+<td id="T_d45fe_row52_col1" class="data row52 col1">ULIPRISTAL</td>
 </tr>
 </tbody>
 </table>
