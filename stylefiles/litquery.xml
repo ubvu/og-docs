@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="litquery" version="1.0" kateversion="5.0" section="Scientific" extensions="*.litq" mimetype="text/x-litquery">
+  <highlighting>
+    <list name="operators">
+      <item>AND</item>
+      <item>OR</item>
+      <item>NOT</item>
+    </list>
+    
+    <contexts>
+      <context attribute="Normal Text" lineEndContext="#stay" name="Normal Text">
+        <!-- Boolean operators -->
+        <keyword attribute="Operator" context="#stay" String="operators" />
+        
+        <!-- Quotation marks and their content -->
+        <DetectChar attribute="String Delimiter" context="String" char="&quot;" />
+        
+        <!-- Parentheses -->
+        <DetectChar attribute="Parentheses" context="#stay" char="(" />
+        <DetectChar attribute="Parentheses" context="#stay" char=")" />
+        
+        <!-- Square brackets and their content -->
+        <DetectChar attribute="Bracket Term" context="BracketTerm" char="[" beginRegion="bracket" />
+      </context>
+      
+      <!-- Context for quoted strings -->
+      <context attribute="String" lineEndContext="#stay" name="String">
+        <DetectChar attribute="String Delimiter" context="#pop" char="&quot;" />
+      </context>
+      
+      <!-- Context for terms in square brackets -->
+      <context attribute="Bracket Term" lineEndContext="#stay" name="BracketTerm">
+        <DetectChar attribute="Bracket Term" context="#pop" char="]" endRegion="bracket" />
+      </context>
+    </contexts>
+    
+    <itemDatas>
+      <itemData name="Normal Text" defStyleNum="dsNormal" />
+      <itemData name="Operator" defStyleNum="dsKeyword" bold="true" />
+      <itemData name="String" defStyleNum="dsString" />
+      <itemData name="String Delimiter" defStyleNum="dsChar" />
+      <itemData name="Parentheses" defStyleNum="dsFunction" bold="true" />
+      <itemData name="Bracket Term" defStyleNum="dsDataType" />
+    </itemDatas>
+  </highlighting>
+  
+  <general>
+    <comments>
+      <comment name="multiLine" start="/*" end="*/" />
+      <comment name="singleLine" start="//" />
+    </comments>
+    <keywords casesensitive="1" />
+  </general>
+</language>
