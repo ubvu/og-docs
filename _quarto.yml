@@ -1,7 +1,9 @@
 project:
   type: website
   render: 
-    - "*.qmd"
+    - index.qmd
+    - queries.qmd
+    - contact.qmd
 
 website:
   title: "Obstretrics & Gynaecology Dashboard"
