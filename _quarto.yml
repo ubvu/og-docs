@@ -18,6 +18,8 @@ format:
   html:
     theme:
       - cosmo
-      - brand
     css: stylefiles/documentation.scss
     toc: true
+    code-overflow: wrap
+    resources:
+      - stylefiles/documentation.scss
