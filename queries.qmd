@@ -4,6 +4,7 @@ title: Queries and abbreviations
 
 # Search Queries
 
+
 ```{python}
 #| echo: false
 #| output: asis
@@ -17,7 +18,12 @@ import pandas as pd
 sys.path.append("ri-queries")
 from working_with_queries import get_query, print_query, print_title
 
-skip_og = ['ANIM', 'HUM']
+# 'ANIM' not used
+# 'HUM' documented separately
+# 'UT-BL', 'BLD-MENS' are combined in BLD
+# 'PL-GEN', 'PL-INS' are combined in PL-PLAC
+# SURG queries (surgery) add no publications to the dashboard
+skip_og = ['ANIM', 'HUM', 'UT-BL', 'BLD-MENS', 'PL-GEN', 'PL-INS', 'SURG-REC', 'SURG-SD']
 skip_clin = ['A-LM', 'A-MON', 'A-NM', 'A-REST', 'A-RO', 'A-RRR']
 skip_topics = ['QOL']
 keep_gyncancers = ['GYN-CER', 'GYN-END', 'GYN-GEN', 'GYN-OVA', 'GYN-VUL']
@@ -92,8 +98,8 @@ for department in files_lists.keys():
             
             # Determine project based on file path
             project = 'OG'
-            if 'CCA' in str(keyword):
-                project = 'CCA'
+            # if 'CCA' in str(keyword):
+                # project = 'CCA'
             
             print_title(q, n=5, project=project)
             if keyword.stem in with_HUM_filter:
@@ -301,7 +307,9 @@ query_files = []
 # Get all the OG query files from the hierarchy
 hierarchy = pd.read_csv(main_path / 'ri-queries' / 'Keywords' / 'OG' / 'keywords_hierarchy.csv')
 
-skip_og = ['ANIM']
+# 'UT-BL', 'BLD-MENS' are combined in BLD
+# 'PL-GEN', 'PL-INS' are combined in PL-PLAC
+skip_og = ['ANIM', 'UT-BL', 'BLD-MENS', 'PL-GEN', 'PL-INS', 'SURG-REC', 'SURG-SD']
 skip_clin = ['A-LM', 'A-MON', 'A-NM', 'A-REST', 'A-RO', 'A-RRR']
 skip_topics = ['QOL']
 skip_dicts = skip_og + skip_clin + skip_topics
@@ -325,7 +333,7 @@ for file_path in all_dict_files:
             query_dict = ast.literal_eval(f.read())
             
         # Determine project and get appropriate keys
-        project = 'OG' if 'OG' in str(file_path) else 'CCA'
+        project = 'OG' # if 'OG' in str(file_path) else 'CCA'
                
         # Get long name based on project
         if project == 'OG':
