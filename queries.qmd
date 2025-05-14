@@ -135,14 +135,14 @@ def print_og_queries(files_by_dept):
                     print('Combined with [HUMAN filter](#filters) for specificity.\n')
                 
                 # Print PubMed query
-                print('_Pubmed query_')
+                # print('_Pubmed query_')
                 query_content = get_query(query_dict, query_type='pubmed')
-                print_query(query_content)
+                print_query(query_content, type='Pubmed')
                 
                 # Print Scopus query
-                print('_Scopus query_')
+                # print('_Scopus query_')
                 query_content = get_query(query_dict, query_type='scopus')
-                print_query(query_content)
+                print_query(query_content, type='Scopus')
 
 def print_remaining_queries(dirs, main_path):
     """Print clinical status queries, topic queries, and any other queries found."""
