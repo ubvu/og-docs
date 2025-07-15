@@ -1,5 +1,8 @@
 ---
 title: "Contact information"
+date-modified: last-modified
 ---
 
-About this site
+For any questions, comments, or suggestions regarding the obstetrics-gynaecology dashboard, please contact:
+
+[researchintelligence.ub@vu.nl](mailto:researchintelligence.ub@vu.nl)
