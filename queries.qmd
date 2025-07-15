@@ -1,5 +1,6 @@
 ---
 title: Queries and abbreviations
+date-modified: last-modified
 ---
 
 # Search Queries

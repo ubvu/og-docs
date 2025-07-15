@@ -23,3 +23,6 @@ format:
       - stylefiles/documentation.scss
     toc: true
     code-overflow: wrap
+
+date: 03/13/2025
+date-format: "D MMMM YYYY"
